@@ -34,7 +34,9 @@
 
 
                 <div>
-                    <a href="/berita" class="btn btn-light fw-semibold text-primary d-inline-flex align-items-center justify-content-center gap-1">Konsultasi Sekarang<ion-icon name="arrow-forward"></ion-icon></a>
+                    <a href="https://wa.me/628988307081?text=Halo%20Admin%20PT%20Solusi%20Koneksi%20Anda"
+                        class="btn btn-light fw-semibold text-primary d-inline-flex align-items-center justify-content-center gap-1">Konsultasi
+                        Sekarang<ion-icon name="arrow-forward"></ion-icon></a>
                 </div>
             </div>
         </div>
@@ -139,7 +141,9 @@
                     @include('partials.guest.cardkarya')
 
                     <div class="d-flex justify-content-center align-items-center">
-                        <a href="/karya" class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat semua karya <ion-icon name="arrow-forward"></ion-icon></a>
+                        <a href="/karya"
+                            class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat
+                            semua karya <ion-icon name="arrow-forward"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -158,7 +162,9 @@
                     @include('partials.guest.cardberita')
 
                     <div class="d-flex justify-content-center align-items-center">
-                        <a href="/berita" class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat semua artikel <ion-icon name="arrow-forward"></ion-icon></a>
+                        <a href="/berita"
+                            class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat
+                            semua artikel <ion-icon name="arrow-forward"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -177,7 +183,9 @@
                     @include('partials.guest.cardgaleri')
 
                     <div class="d-flex justify-content-center align-items-center">
-                        <a href="/galeri" class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat semua galeri <ion-icon name="arrow-forward"></ion-icon></a>
+                        <a href="/galeri"
+                            class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat
+                            semua galeri <ion-icon name="arrow-forward"></ion-icon></a>
                     </div>
                 </div>
             </div>
