@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Berita - Seycis</title>
+    <title>Berita - PT Solusi Koneksi Anda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +12,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-        <link rel="icon" type="image/png" href="../assets/img/logoseycisblue.png">
+        <link rel="icon" type="image/png" href="{{ asset('assets/img/logomkablue.png') }}">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <main class="mt-5 pt-6" style="background-color: #f5f5f5;">
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
             <div class="container">
-                <h2 class="fw-bold mb-3">Berita Seycis</h2>
+                <h2 class="fw-bold mb-3">Artikel Kami</h2>
                 <div class="d-flex justify-content-center align-items-center w-100 px-3 px-md-0">
                     <form action="{{ url()->current() }}" method="GET" class="d-flex gap-2 mb-4 w-100"
                         style="max-width: 580px;">
