@@ -15,7 +15,7 @@ class BerandasController extends Controller
         $galeris = Galeris::latest()->take(3)->get();
         $layanans  = Layanans::latest()->take(4)->get();
 
-        return view('guest.beranda', compact('artikels', 'galeris', 'layanans'));
+        return view('guest.beranda.beranda', compact('artikels', 'galeris', 'layanans'));
     }
 
     public function layanan(Request $request)

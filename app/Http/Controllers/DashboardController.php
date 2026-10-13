@@ -19,7 +19,7 @@ class DashboardController extends Controller
         $totalArtikel = Artikels::count();
         $totalGaleri = Galeris::count();
 
-        return view('admin.dasbor', compact('totalLayanan', 'totalArtikel', 'totalGaleri'));
+        return view('admin.dasbor.dasbor', compact('totalLayanan', 'totalArtikel', 'totalGaleri'));
     }
 
     /**

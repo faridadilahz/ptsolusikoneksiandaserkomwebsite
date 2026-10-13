@@ -20,12 +20,12 @@
         <!-- place navbar here -->
     </header>
     <main class="d-flex flex-column flex-lg-row min-vh-100">
-        @include('partials.admin.sidebar')
+        @include('partials.admin.sidebar.sidebar')
 
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid">
-                @include('partials.admin.topbar')
-                @include('partials.admin.statistic')
+                @include('partials.admin.topbar.topbardasbor')
+                @include('partials.admin.statistic.statistic')
             </div>
         </div>
     </main>

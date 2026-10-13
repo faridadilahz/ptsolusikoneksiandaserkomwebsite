@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        @include('partials.guest.navbar')
+        @include('partials.guest.navbar.navbar')
     </header>
     <main class="mt-5 pt-6" style="background-color: #f5f5f5;">
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
@@ -39,13 +39,13 @@
                     </form>
                 </div>
                 <div class="row g-4 justify-content-center">
-                    @include('partials.guest.cardartikel')
+                    @include('partials.guest.artikel.cardartikel')
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        @include('partials.guest.footer')
+        @include('partials.guest.footer.footer')
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

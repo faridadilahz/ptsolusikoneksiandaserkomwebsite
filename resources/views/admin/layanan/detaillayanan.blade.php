@@ -20,7 +20,7 @@
         <!-- place navbar here -->
     </header>
     <main class="d-flex flex-column flex-lg-row min-vh-100">
-        @include('partials.admin.sidebar')
+        @include('partials.admin.sidebar.sidebar')
 
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="mx-auto" style="max-width: 850px">
@@ -34,7 +34,7 @@
                             <ion-icon size="large" name="pricetag"></ion-icon>
                         </span>
                     </div>
-                    <h2 class="fw-bold mb-4" style="max-width: 850px;">{{ $layanans->namalayanan }}</h2>
+                    <h2 class="fw-bold mb-1" style="max-width: 850px;">{{ $layanans->namalayanan }}</h2>
                     <img src="{{ asset('storage/' . $layanans->gambarlayanan) }}" alt="" class="rounded-3 mb-3 img-fluid"
                         style="max-width: 850px; width: 100%; height: auto">
                     <p class="text-secondary" style="max-width: 850px;">{{ $layanans->deskripsilayanan }}</p>

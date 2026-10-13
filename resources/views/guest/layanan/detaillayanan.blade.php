@@ -20,16 +20,16 @@
 
 <body>
     <header>
-        @include('partials.guest.navbar')
+        @include('partials.guest.navbar.navbar')
     </header>
     <main class="mt-5 pt-6">
         <div class="d-flex text-center flex-column justify-content-center align-items-center px-5 py-5">
             <div>
-                        <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
-                            <ion-icon size="large" name="pricetag"></ion-icon>
-                        </span>
-                    </div>
-            <h2 class="fw-bold mb-4">{{ $layanans->namalayanan }}</h2>
+                <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
+                    <ion-icon size="large" name="pricetag"></ion-icon>
+                </span>
+            </div>
+            <h2 class="fw-bold mb-1">{{ $layanans->namalayanan }}</h2>
             <img src="{{ asset('storage/' . $layanans->gambarlayanan) }}" alt="" class="rounded-3 mb-3"
                 style="max-width: 850px;">
             <p class="text-secondary" style="max-width: 850px;">{{ $layanans->deskripsilayanan }}</p>

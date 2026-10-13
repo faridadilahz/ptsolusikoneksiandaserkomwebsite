@@ -20,18 +20,18 @@
         <!-- place navbar here -->
     </header>
     <main class="d-flex flex-column flex-lg-row min-vh-100">
-        @include('partials.admin.sidebar')
+        @include('partials.admin.sidebar.sidebar')
 
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid">
-                @include('partials.admin.topbargaleri')
+                @include('partials.admin.topbar.topbargaleri')
                 @if (session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
 
                 <div>
                     <div class="row g-4">
-                        @include('partials.admin.cardgaleri')
+                        @include('partials.admin.galeri.cardgaleri')
                     </div>
                 </div>
             </div>

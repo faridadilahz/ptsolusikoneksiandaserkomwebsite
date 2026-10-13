@@ -11,17 +11,17 @@ class ProfileController extends Controller
     public function index() {
         $user = Auth::user();
 
-        return view('admin.profil', compact('user'));
+        return view('admin.profil.profil', compact('user'));
     }
 
     public function kelolakatasandi() {
         $user = Auth::user();
 
-        return view('admin.kelolakatasandi', compact('user'));
+        return view('admin.profil.kelolakatasandi', compact('user'));
     }
 
     public function ubahkatasandi() {
-        return view('admin.ubahkatasandi');
+        return view('admin.profil.ubahkatasandi');
     }
 
     public function updatekatasandi(Request $request) {
@@ -45,12 +45,12 @@ class ProfileController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return redirect()->route('admin.kelolakatasandi')->with('success', 'Kata sandi berhasil diperbarui!');
+        return redirect()->route('admin.profil.kelolakatasandi')->with('success', 'Kata sandi berhasil diperbarui!');
     }
 
     public function ubahprofil() {
         $user = Auth::user();
-        return view('admin.ubahprofil', compact('user'));
+        return view('admin.profil.ubahprofil', compact('user'));
     }
 
     public function editprofil(Request $request) {

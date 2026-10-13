@@ -5,7 +5,7 @@
                 <div class="card-body text-start">
                     <div>
                         <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
-                            <ion-icon size="large" name="pricetag"></ion-icon>
+                            <ion-icon style="font-size: 24px;" name="pricetag"></ion-icon>
                         </span>
                     </div>
                     <h5 class="card-title fw-bolder">{{ Str::limit($item->namalayanan, 96) }}</h5>

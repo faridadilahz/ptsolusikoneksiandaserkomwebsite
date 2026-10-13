@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        @include('partials.guest.navbar')
+        @include('partials.guest.navbar.navbar')
     </header>
     <main style="background-color: #f5f5f5;">
         <div class="d-flex min-vh-100 justify-content-center align-items-center text-white"
@@ -138,7 +138,7 @@
                     </p>
                 </div>
                 <div class="row g-4 justify-content-center">
-                    @include('partials.guest.cardlayanan')
+                    @include('partials.guest.layanan.cardlayanan')
 
                     <div class="d-flex justify-content-center align-items-center">
                         <a href="/layanan"
@@ -159,7 +159,7 @@
                     </p>
                 </div>
                 <div class="row g-4 justify-content-center">
-                    @include('partials.guest.cardartikel')
+                    @include('partials.guest.artikel.cardartikel')
 
                     <div class="d-flex justify-content-center align-items-center">
                         <a href="/artikel"
@@ -180,7 +180,7 @@
                     </p>
                 </div>
                 <div class="row g-4 justify-content-center">
-                    @include('partials.guest.cardgaleri')
+                    @include('partials.guest.galeri.cardgaleri')
 
                     <div class="d-flex justify-content-center align-items-center">
                         <a href="/galeri"
@@ -192,24 +192,23 @@
         </div>
 
         <div class="container mt-5 text-center">
-    <img src="{{ asset('assets/img/dottedmap.png') }}" 
-         class="img-fluid rounded-4 mb-4" 
-         style="max-width: 990px; width: 100%; height: auto; object-fit: cover; 
+            <img src="{{ asset('assets/img/dottedmap.png') }}" class="img-fluid rounded-4 mb-4"
+                style="max-width: 990px; width: 100%; height: auto; object-fit: cover; 
                 -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
                 mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
-</div>
+        </div>
 
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
             <div class="container">
                 <div class="row g-4 justify-content-center">
-                    @include('partials.guest.kontak')
+                    @include('partials.guest.kontak.kontak')
                 </div>
             </div>
         </div>
 
     </main>
     <footer>
-        @include('partials.guest.footer')
+        @include('partials.guest.footer.footer')
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>

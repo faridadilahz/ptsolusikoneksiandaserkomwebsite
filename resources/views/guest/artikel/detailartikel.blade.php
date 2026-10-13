@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        @include('partials.guest.navbar')
+        @include('partials.guest.navbar.navbar')
     </header>
     <main class="mt-5 pt-6" style="background-color: #f5f5f5;">
         <div class="d-flex text-center flex-column justify-content-center align-items-center px-5 py-5">
