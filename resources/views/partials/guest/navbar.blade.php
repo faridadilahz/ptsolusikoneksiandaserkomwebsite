@@ -16,8 +16,8 @@
                             class="nav-link {{ request()->is('beranda*') || request()->is('/') ? 'active' : '' }}">Beranda</a>
                     </li>
                     <li class="nav-item-active me-lg-4">
-                        <a href="/karya"
-                            class="nav-link {{ request()->is('karya*') || request()->is('/') ? 'active' : '' }}">Layanan</a>
+                        <a href="/layanan"
+                            class="nav-link {{ request()->is('layanan*') || request()->is('/') ? 'active' : '' }}">Layanan</a>
                     </li>
                     <li class="nav-item-active me-lg-4">
                         <a href="/berita"

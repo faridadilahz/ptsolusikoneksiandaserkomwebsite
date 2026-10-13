@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Karya Jurusan - PT Solusi Koneksi Anda</title>
+    <title>Layanan - PT Solusi Koneksi Anda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +39,7 @@
                     </form>
                 </div>
                 <div class="row g-4 justify-content-center">
-                    @include('partials.guest.cardkarya')
+                    @include('partials.guest.cardlayanan')
                 </div>
             </div>
         </div>

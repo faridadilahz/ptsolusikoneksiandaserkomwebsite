@@ -7,7 +7,7 @@
         <div class="card card-light h-100 border-0">
             <div class="card-body">
                 <div class="badge bg-primary-subtle text-primary p-2 mb-3"><i class="fa-solid fa-lightbulb fa-lg"></i></div>
-                <h1 class="card-title text-primary fw-bolder">{{ $totalKarya }}</h1>
+                <h1 class="card-title text-primary fw-bolder">{{ $totalLayanan }}</h1>
                 <p class="text-secondary">Jumlah Layanan</p>
             </div>
         </div>

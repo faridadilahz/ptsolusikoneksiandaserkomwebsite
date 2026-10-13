@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>{{ $karyas->namakarya }} - PT Solusi Koneksi Anda</title>
+    <title>{{ $layanans->namalayanan }} - PT Solusi Koneksi Anda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,18 +22,17 @@
     <header>
         @include('partials.guest.navbar')
     </header>
-    <main class="mt-5 pt-6" style="background-color: #f5f5f5;">
+    <main class="mt-5 pt-6">
         <div class="d-flex text-center flex-column justify-content-center align-items-center px-5 py-5">
-            <p class="text-secondary mb-4"><i
-                    class="fa-regular fa-calendar me-2"></i>{{ $karyas->created_at->locale('id')->translatedFormat('d F Y') }}
-            </p>
-            <span class="badge rounded-pill bg-primary px-3 py-1 mb-4">
-                        {{ $karyas->jurusan }}
-                    </span>
-            <h2 class="fw-bold mb-4">{{ $karyas->namakarya }}</h2>
-            <img src="{{ asset('storage/' . $karyas->gambarkarya) }}" alt="" class="rounded-3 mb-3"
+            <div>
+                        <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
+                            <ion-icon size="large" name="pricetag"></ion-icon>
+                        </span>
+                    </div>
+            <h2 class="fw-bold mb-4">{{ $layanans->namalayanan }}</h2>
+            <img src="{{ asset('storage/' . $layanans->gambarlayanan) }}" alt="" class="rounded-3 mb-3"
                 style="max-width: 850px;">
-            <p class="text-secondary" style="max-width: 850px;">{{ $karyas->deskripsikarya }}</p>
+            <p class="text-secondary" style="max-width: 850px;">{{ $layanans->deskripsilayanan }}</p>
             <div>
                 <button onclick="history.back()" class="btn btn-outline-primary px-4 py-2 rounded-3">
                     <i class="fa-solid fa-arrow-left me-2"></i>Kembali
@@ -46,6 +45,8 @@
         <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>

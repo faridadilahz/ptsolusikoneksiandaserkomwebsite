@@ -3,7 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BerandasController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\KaryasController;
+use App\Http\Controllers\LayanansController;
 use App\Http\Controllers\BeritasController;
 use App\Http\Controllers\GalerisController;
 use App\Http\Controllers\ProfileController;
@@ -15,8 +15,8 @@ Route::redirect('/', '/beranda');
 Route::get('/beranda', [BerandasController::class, 'showBeranda']);
 Route::post('/review/store', [BerandasController::class, 'storeReview'])->name('review.store');
 
-Route::get('/karya', [BerandasController::class, 'karya']);
-Route::get('/karya/{id}', [BerandasController::class, 'showKarya'])->name('guest.detailkarya');
+Route::get('/layanan', [BerandasController::class, 'layanan']);
+Route::get('/layanan/{id}', [BerandasController::class, 'showLayanan'])->name('guest.detaillayanan');
 
 Route::get('/berita', [BerandasController::class, 'berita']);
 Route::get('/berita/{id}', [BerandasController::class, 'showBerita'])->name('guest.detailberita');
@@ -34,14 +34,14 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     Route::get('admin/dasbor', [DashboardController::class, 'index'])->name('dasbor');
 
-    Route::get('admin/karya', [KaryasController::class, 'index'])->name('karya');
-    Route::get('admin/karya/posting-karya', [KaryasController::class, 'create'])->name('karya.posting');
-    Route::post('admin/karya/posting-karya', [KaryasController::class, 'store'])->name('karya.store');
+    Route::get('admin/layanan', [LayanansController::class, 'index'])->name('layanan');
+    Route::get('admin/layanan/tambah-layanan', [LayanansController::class, 'create'])->name('layanan.add');
+    Route::post('admin/layanan/tambah-layanan', [LayanansController::class, 'store'])->name('layanan.store');
     
-    Route::get('admin/karya/edit-karya/{id}', [KaryasController::class, 'edit'])->name('karya.edit');
-    Route::put('admin/karya/{id}', [KaryasController::class, 'update'])->name('karya.update');
-    Route::delete('admin/karya/{id}', [KaryasController::class, 'destroy'])->name('karya.destroy');
-    Route::get('admin/karya/{id}', [KaryasController::class, 'show'])->name('karya.show');
+    Route::get('admin/layanan/edit-layanan/{id}', [LayanansController::class, 'edit'])->name('layanan.edit');
+    Route::put('admin/layanan/{id}', [LayanansController::class, 'update'])->name('layanan.update');
+    Route::delete('admin/layanan/{id}', [LayanansController::class, 'destroy'])->name('layanan.destroy');
+    Route::get('admin/layanan/{id}', [LayanansController::class, 'show'])->name('layanan.show');
 
     Route::get('admin/berita', [BeritasController::class, 'index'])->name('berita');
     Route::get('admin/berita/posting-berita', [BeritasController::class, 'create'])->name('berita.posting');

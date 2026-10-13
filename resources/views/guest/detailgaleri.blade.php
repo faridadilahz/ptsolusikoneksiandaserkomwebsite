@@ -21,7 +21,7 @@
     <header>
         @include('partials.guest.navbar')
     </header>
-    <main class="mt-5 pt-6" style="background-color: #f5f5f5;">
+    <main class="mt-5 pt-6">
         <div class="d-flex text-center flex-column justify-content-center align-items-center px-5 py-5">
             <p class="text-secondary"><i class="fa-regular fa-calendar me-2"></i>{{ $galeris->created_at->locale('id')->translatedFormat('d F Y')}}</p>
             <h2 class="fw-bold mb-4">{{ $galeris->judulgaleri }}</h2>

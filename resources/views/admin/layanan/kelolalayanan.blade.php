@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Kelola Karya - Seycis</title>
+    <title>Kelola Layanan - Seycis</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,14 +24,14 @@
 
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid">
-                @include('partials.admin.topbarkarya')
+                @include('partials.admin.topbarlayanan')
                 @if (session('success'))
                     <div class="alert alert-success">{{ session('success') }}
                     </div>
                 @endif
                 <div>
                     <div class="row g-4">
-                        @include('partials.admin.cardkarya')
+                        @include('partials.admin.cardlayanan')
                     </div>
                 </div>
             </div>

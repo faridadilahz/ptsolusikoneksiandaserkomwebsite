@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="d-flex gap-2">
-                        <button type="submit" class="btn btn-primary text-white">Posting</button>
+                        <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
                         <a href="{{ route('galeri') }}" class="btn btn-outline-primary">Batal</a>
                     </div>
 

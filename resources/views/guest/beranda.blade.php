@@ -138,12 +138,12 @@
                     </p>
                 </div>
                 <div class="row g-4 justify-content-center">
-                    @include('partials.guest.cardkarya')
+                    @include('partials.guest.cardlayanan')
 
                     <div class="d-flex justify-content-center align-items-center">
-                        <a href="/karya"
+                        <a href="/layanan"
                             class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat
-                            semua karya <ion-icon name="arrow-forward"></ion-icon></a>
+                            semua layanan <ion-icon name="arrow-forward"></ion-icon></a>
                     </div>
                 </div>
             </div>

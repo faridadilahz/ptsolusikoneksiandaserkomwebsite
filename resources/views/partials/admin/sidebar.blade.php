@@ -28,8 +28,8 @@
                     aria-current="page"><i class="fa-solid fa-house me-3 width-fixed"></i>Dasbor</a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('karya') }}"
-                    class="nav-link mb-2 text-primary {{ request()->is('admin/karya*') ? 'active text-white' : '' }}"
+                <a href="{{ route('layanan') }}"
+                    class="nav-link mb-2 text-primary {{ request()->is('admin/layanan*') ? 'active text-white' : '' }}"
                     aria-current="page"><i class="fa-solid fa-lightbulb me-3 width-fixed"></i>Kelola Layanan</a>
             </li>
             <li class="nav-item">

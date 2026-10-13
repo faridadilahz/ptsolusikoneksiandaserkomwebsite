@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>{{ $karyas->namakarya }} - Seycis</title>
+    <title>{{ $layanans->namalayanan }} - Seycis</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,21 +25,19 @@
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="mx-auto" style="max-width: 850px">
                 <div class="mb-4 text-start">
-                    <a href="/admin/karya" class="text-decoration-none text-secondary mb-2"><i
+                    <a href="/admin/layanan" class="text-decoration-none text-secondary mb-2"><i
                             class="fa-solid fa-arrow-left me-2"></i>Kembali</a>
                 </div>
-                <div class="d-flex text-center flex-column justify-content-center align-items-center">
-
-                    <p class="text-secondary mb-4"><i
-                            class="fa-regular fa-calendar me-2"></i>{{ $karyas->created_at->locale('id')->translatedFormat('d F Y') }}
-                    </p>
-                    <span class="badge rounded-pill bg-primary px-3 py-1 mb-2">
-                        {{ $karyas->jurusan }}
-                    </span>
-                    <h2 class="fw-bold mb-4" style="max-width: 850px;">{{ $karyas->namakarya }}</h2>
-                    <img src="{{ asset('storage/' . $karyas->gambarkarya) }}" alt="" class="rounded-3 mb-3 img-fluid"
+                <div class="d-flex text-start flex-column justify-content-start align-items-start">
+                    <div>
+                        <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
+                            <ion-icon size="large" name="pricetag"></ion-icon>
+                        </span>
+                    </div>
+                    <h2 class="fw-bold mb-4" style="max-width: 850px;">{{ $layanans->namalayanan }}</h2>
+                    <img src="{{ asset('storage/' . $layanans->gambarlayanan) }}" alt="" class="rounded-3 mb-3 img-fluid"
                         style="max-width: 850px; width: 100%; height: auto">
-                    <p class="text-secondary" style="max-width: 850px;">{{ $karyas->deskripsikarya }}</p>
+                    <p class="text-secondary" style="max-width: 850px;">{{ $layanans->deskripsilayanan }}</p>
                 </div>
             </div>
         </div>
@@ -54,3 +52,6 @@
 </body>
 
 </html>
+
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
