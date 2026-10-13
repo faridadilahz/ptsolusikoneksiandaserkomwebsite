@@ -9,7 +9,7 @@
         <a href="{{ route('dasbor') }}" class="d-flex text-decoration-none px-2">
             <img src="{{ asset('assets/img/logomkablue.png') }}" alt="Logo PT Solusi Koneksi Anda" class="me-1"
                 style="max-width: 36px; object-fit: cover;">
-            <span class="fs-4 fw-bold text-primary">MKA</span>
+            <span class="fs-4 fw-bold text-primary">PT SKA</span>
         </a>
 
         <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button" data-bs-toggle="collapse"
@@ -30,12 +30,12 @@
             <li class="nav-item">
                 <a href="{{ route('karya') }}"
                     class="nav-link mb-2 text-primary {{ request()->is('admin/karya*') ? 'active text-white' : '' }}"
-                    aria-current="page"><i class="fa-solid fa-lightbulb me-3 width-fixed"></i>Kelola Karya</a>
+                    aria-current="page"><i class="fa-solid fa-lightbulb me-3 width-fixed"></i>Kelola Layanan</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('berita') }}"
                     class="nav-link mb-2 text-primary {{ request()->is('admin/berita*') ? 'active text-white' : '' }}"
-                    aria-current="page"><i class="fa-solid fa-newspaper me-3 width-fixed"></i>Kelola Berita</a>
+                    aria-current="page"><i class="fa-solid fa-newspaper me-3 width-fixed"></i>Kelola Artikel</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('galeri') }}"
