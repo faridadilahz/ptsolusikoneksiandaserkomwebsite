@@ -17,7 +17,7 @@ class GalerisController extends Controller
         $query->where('judulgaleri', 'like', '%' . $request->search . '%');
     })->latest()->get();
 
-    return view('admin.kelolagaleri', compact('galeris'));
+    return view('admin.galeri.kelolagaleri', compact('galeris'));
     }
 
     /**
@@ -25,7 +25,7 @@ class GalerisController extends Controller
      */
     public function create()
     {
-        return view('admin.postinggaleri');
+        return view('admin.galeri.postinggaleri');
     }
 
     /**
@@ -54,7 +54,7 @@ class GalerisController extends Controller
     public function show($id)
     {
         $galeris = Galeris::findOrFail($id);
-        return view('admin.detailgaleri', compact('galeris'));
+        return view('admin.galeri.detailgaleri', compact('galeris'));
     }
 
     /**
@@ -63,7 +63,7 @@ class GalerisController extends Controller
     public function edit($id)
     {
         $galeris = Galeris::findOrFail($id);
-        return view('admin.editgaleri', compact('galeris'));
+        return view('admin.galeri.editgaleri', compact('galeris'));
     }
 
     /**
