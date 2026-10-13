@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dashboard;
 use App\Models\Layanans;
-use App\Models\Beritas;
+use App\Models\Artikels;
 use App\Models\Galeris;
 use Illuminate\Http\Request;
 
@@ -16,10 +16,10 @@ class DashboardController extends Controller
     public function index()
     {
         $totalLayanan = Layanans::count();
-        $totalBerita = Beritas::count();
+        $totalArtikel = Artikels::count();
         $totalGaleri = Galeris::count();
 
-        return view('admin.dasbor', compact('totalLayanan', 'totalBerita', 'totalGaleri'));
+        return view('admin.dasbor', compact('totalLayanan', 'totalArtikel', 'totalGaleri'));
     }
 
     /**

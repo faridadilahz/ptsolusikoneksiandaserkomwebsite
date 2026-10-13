@@ -33,8 +33,8 @@
                     aria-current="page"><i class="fa-solid fa-lightbulb me-3 width-fixed"></i>Kelola Layanan</a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('berita') }}"
-                    class="nav-link mb-2 text-primary {{ request()->is('admin/berita*') ? 'active text-white' : '' }}"
+                <a href="{{ route('artikel') }}"
+                    class="nav-link mb-2 text-primary {{ request()->is('admin/artikel*') ? 'active text-white' : '' }}"
                     aria-current="page"><i class="fa-solid fa-newspaper me-3 width-fixed"></i>Kelola Artikel</a>
             </li>
             <li class="nav-item">

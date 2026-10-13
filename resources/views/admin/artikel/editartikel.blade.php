@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Edit Berita - Seruli</title>
+    <title>Edit Artikel - Seruli</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,45 +24,45 @@
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid" style="max-width: 900px;">
 
-                <form action="{{ route('berita.update', $beritas->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('artikel.update', $artikels->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
-                    @if ($beritas->gambarberita)
+                    @if ($artikels->gambarartikel)
                         <div class="mb-2">
-                            <img src="{{ asset('storage/' . $beritas->gambarberita) }}" class="rounded-3"
+                            <img src="{{ asset('storage/' . $artikels->gambarartikel) }}" class="rounded-3"
                                 style="max-height: 144px; object-fit: cover;">
                         </div>
                     @endif
 
                     <div class="mb-4">
-                        <label for="gambarberita" class="form-label text-dark fw-semibold">Gambar Berita</label>
-                        <input type="file" name="gambarberita" id="gambarberita" class="form-control"
+                        <label for="gambarartikel" class="form-label text-dark fw-semibold">Gambar Artikel</label>
+                        <input type="file" name="gambarartikel" id="gambarartikel" class="form-control"
                             accept="image/*">
                     </div>
 
                     <div class="mb-4">
-                        <label for="judulberita" class="form-label text-dark fw-normal mb-2">Judul Berita</label>
+                        <label for="judulartikel" class="form-label text-dark fw-normal mb-2">Judul Artikel</label>
                         <div class="position-relative">
-                            <input type="text" name="judulberita" id="judulberita"
+                            <input type="text" name="judulartikel" id="judulartikel"
                                 class="form-control border-0 rounded-3 py-3 pe-5"
-                                placeholder="Masukkan judul berita disini"
-                                value="{{ old('judulberita', $beritas->judulberita) }}">
+                                placeholder="Masukkan judul artikel disini"
+                                value="{{ old('judulartikel', $artikels->judulartikel) }}">
                         </div>
                     </div>
 
                     <div class="mb-4">
-                        <label for="deskripsiberita" class="form-label text-dark fw-normal mb-2">Deskripsi
-                            Berita</label>
+                        <label for="deskripsiartikel" class="form-label text-dark fw-normal mb-2">Deskripsi
+                            Artikel</label>
                         <div class="position-relative">
-                            <textarea name="deskripsiberita" id="deskripsiberita" rows="5" class="form-control border-0 rounded-3 py-3 pe-5"
-                                placeholder="Masukkan deskripsi berita disini">{{ old('deskripsiberita', $beritas->deskripsiberita) }}</textarea>
+                            <textarea name="deskripsiartikel" id="deskripsiartikel" rows="5" class="form-control border-0 rounded-3 py-3 pe-5"
+                                placeholder="Masukkan deskripsi artikel disini">{{ old('deskripsiartikel', $artikels->deskripsiartikel) }}</textarea>
                         </div>
                     </div>
 
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
-                        <a href="{{ route('berita') }}" class="btn btn-outline-primary">Batal</a>
+                        <a href="{{ route('artikel') }}" class="btn btn-outline-primary">Batal</a>
                     </div>
 
                 </form>

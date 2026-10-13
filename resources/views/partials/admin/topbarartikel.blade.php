@@ -5,15 +5,15 @@
 <header class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center bg-white p-3 mb-4 rounded-3 gap-3">
 
     <div class="topbar-left">
-        <h4 class="fw-bold mb-1">Kelola Berita</h4>
-        <p class="text-secondary mb-0">Tambah, ubah, atau hapus postingan berita sekolah.</p>
+        <h4 class="fw-bold mb-1">Kelola Artikel</h4>
+        <p class="text-secondary mb-0">Tambah, ubah, atau hapus postingan artikel sekolah.</p>
     </div>
 
     <div class="topbar-right d-flex align-items-center gap-2 w-100 w-lg-auto justify-content-between justify-content-lg-end">
         {{-- Search Bar Simpel --}}
         <form action="{{ url()->current() }}" method="GET" class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-0 me-lg-2">
             <div class="input-group">
-                <input type="text" name="search" class="form-control bg-light border-0" placeholder="Cari berita..." value="{{ request('search') }}">
+                <input type="text" name="search" class="form-control bg-light border-0" placeholder="Cari artikel..." value="{{ request('search') }}">
                 <button class="btn btn-light border-0" type="submit">
                     <i class="fa-solid fa-magnifying-glass text-secondary"></i>
                 </button>
@@ -25,9 +25,9 @@
             </div>
         </form>
 
-        <a href="{{ route('berita.posting') }}" class="btn btn-primary btn-fab text-nowrap"><i
+        <a href="{{ route('artikel.posting') }}" class="btn btn-primary btn-fab text-nowrap"><i
                 class="fa-solid fa-plus me-0 me-lg-2 fa-lg"></i>
-            <span class="d-none d-lg-inline">Posting Berita</span>
+            <span class="d-none d-lg-inline">Posting Artikel</span>
         </a>
     </div>
 </header>

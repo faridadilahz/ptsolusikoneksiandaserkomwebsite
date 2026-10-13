@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Layanans;
-use App\Models\Beritas;
+use App\Models\Artikels;
 use App\Models\Galeris;
 
 class BerandasController extends Controller
 {
     public function showBeranda()
     {
-        $beritas = Beritas::latest()->take(3)->get();
+        $artikels = Artikels::latest()->take(3)->get();
         $galeris = Galeris::latest()->take(3)->get();
         $layanans  = Layanans::latest()->take(3)->get();
 
-        return view('guest.beranda', compact('beritas', 'galeris', 'layanans'));
+        return view('guest.beranda', compact('artikels', 'galeris', 'layanans'));
     }
 
     public function layanan(Request $request)
@@ -28,14 +28,14 @@ class BerandasController extends Controller
         return view('guest.layanan.layanan', compact('layanans'));
     }
 
-    public function berita(Request $request)
+    public function artikel(Request $request)
     {
-        $beritas = Beritas::when($request->search, function ($query) use ($request) {
-            $query->where('judulberita', 'like', '%' . $request->search . '%')
-                  ->orWhere('deskripsiberita', 'like', '%' . $request->search . '%');
+        $artikels = Artikels::when($request->search, function ($query) use ($request) {
+            $query->where('judulartikel', 'like', '%' . $request->search . '%')
+                  ->orWhere('deskripsiartikel', 'like', '%' . $request->search . '%');
         })->latest()->get();
 
-        return view('guest.berita', compact('beritas'));
+        return view('guest.artikel', compact('artikels'));
     }
 
     public function galeri(Request $request)
@@ -54,10 +54,10 @@ class BerandasController extends Controller
         return view('guest.layanan.detaillayanan', compact('layanans'));
     }
 
-    public function showBerita($id)
+    public function showArtikel($id)
     {
-        $beritas = Beritas::findOrFail($id);
-        return view('guest.detailberita', compact('beritas'));
+        $artikels = Artikels::findOrFail($id);
+        return view('guest.detailartikel', compact('artikels'));
     }
 
     public function showGaleri($id)

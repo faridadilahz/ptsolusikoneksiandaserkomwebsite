@@ -20,8 +20,8 @@
                             class="nav-link {{ request()->is('layanan*') || request()->is('/') ? 'active' : '' }}">Layanan</a>
                     </li>
                     <li class="nav-item-active me-lg-4">
-                        <a href="/berita"
-                            class="nav-link {{ request()->is('berita*') || request()->is('/') ? 'active' : '' }}">Artikel</a>
+                        <a href="/artikel"
+                            class="nav-link {{ request()->is('artikel*') || request()->is('/') ? 'active' : '' }}">Artikel</a>
                     </li>
                     <li class="nav-item-active me-lg-4">
                         <a href="/galeri"

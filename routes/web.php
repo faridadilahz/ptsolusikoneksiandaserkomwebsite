@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BerandasController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LayanansController;
-use App\Http\Controllers\BeritasController;
+use App\Http\Controllers\ArtikelsController;
 use App\Http\Controllers\GalerisController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Galeris;
@@ -18,8 +18,8 @@ Route::post('/review/store', [BerandasController::class, 'storeReview'])->name('
 Route::get('/layanan', [BerandasController::class, 'layanan']);
 Route::get('/layanan/{id}', [BerandasController::class, 'showLayanan'])->name('guest.detaillayanan');
 
-Route::get('/berita', [BerandasController::class, 'berita']);
-Route::get('/berita/{id}', [BerandasController::class, 'showBerita'])->name('guest.detailberita');
+Route::get('/artikel', [BerandasController::class, 'artikel']);
+Route::get('/artikel/{id}', [BerandasController::class, 'showArtikel'])->name('guest.detailartikel');
 
 Route::get('/galeri', [BerandasController::class, 'galeri']);
 Route::get('/galeri/{id}', [BerandasController::class, 'showGaleri'])->name('guest.detailgaleri');
@@ -43,14 +43,14 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('admin/layanan/{id}', [LayanansController::class, 'destroy'])->name('layanan.destroy');
     Route::get('admin/layanan/{id}', [LayanansController::class, 'show'])->name('layanan.show');
 
-    Route::get('admin/berita', [BeritasController::class, 'index'])->name('berita');
-    Route::get('admin/berita/posting-berita', [BeritasController::class, 'create'])->name('berita.posting');
-    Route::post('admin/berita/posting-berita', [BeritasController::class, 'store'])->name('berita.store');
-    Route::get('admin/berita/{id}', [BeritasController::class, 'show'])->name('berita.show');
+    Route::get('admin/artikel', [ArtikelsController::class, 'index'])->name('artikel');
+    Route::get('admin/artikel/posting-artikel', [ArtikelsController::class, 'create'])->name('artikel.posting');
+    Route::post('admin/artikel/posting-artikel', [ArtikelsController::class, 'store'])->name('artikel.store');
+    Route::get('admin/artikel/{id}', [ArtikelsController::class, 'show'])->name('artikel.show');
 
-    Route::get('admin/berita/edit-berita/{id}', [BeritasController::class, 'edit'])->name('berita.edit');
-    Route::put('admin/berita/{id}', [BeritasController::class, 'update'])->name('berita.update');
-    Route::delete('admin/berita/{id}', [BeritasController::class, 'destroy'])->name('berita.destroy');
+    Route::get('admin/artikel/edit-artikel/{id}', [ArtikelsController::class, 'edit'])->name('artikel.edit');
+    Route::put('admin/artikel/{id}', [ArtikelsController::class, 'update'])->name('artikel.update');
+    Route::delete('admin/artikel/{id}', [ArtikelsController::class, 'destroy'])->name('artikel.destroy');
 
     Route::get('admin/galeri', [GalerisController::class, 'index'])->name('galeri');
     Route::get('admin/galeri/posting-galeri', [GalerisController::class, 'create'])->name('galeri.posting');

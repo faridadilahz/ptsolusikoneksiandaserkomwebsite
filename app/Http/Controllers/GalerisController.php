@@ -100,6 +100,6 @@ class GalerisController extends Controller
         $galeris = Galeris::findOrFail($id);
         $galeris->delete();
 
-        return redirect()->route('galeri')->with('success', 'Berita berhasil dihapus!');
+        return redirect()->route('galeri')->with('success', 'Galeri berhasil dihapus!');
     }
 }

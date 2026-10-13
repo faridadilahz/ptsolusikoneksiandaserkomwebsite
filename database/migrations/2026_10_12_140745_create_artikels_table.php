@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('gambarartikel')->nullable();
-            $table->string('judulartikel');
-            $table->string('deskripsiartikel');
+            $table->text('judulartikel');
+            $table->text('deskripsiartikel');
         });
     }
 

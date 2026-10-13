@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('layanans', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('namalayanan');
+            $table->text('namalayanan');
             $table->text('deskripsilayanan');
         });
     }
