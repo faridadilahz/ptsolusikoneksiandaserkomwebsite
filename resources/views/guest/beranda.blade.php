@@ -35,7 +35,7 @@
 
                 <div>
                     <a href="https://wa.me/628988307081?text=Halo%20Admin%20PT%20Solusi%20Koneksi%20Anda"
-                        class="btn btn-light fw-semibold text-primary d-inline-flex align-items-center justify-content-center gap-1">Konsultasi
+                        class="btn btn-light fw-semibold text-primary d-inline-flex align-items-center justify-content-center gap-1 p-2">Konsultasi
                         Sekarang<ion-icon name="arrow-forward"></ion-icon></a>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 <div class="row g-4 justify-content-center">
                     <!-- Card 1 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="document-text"></ion-icon>
@@ -82,7 +82,7 @@
 
                     <!-- Card 2 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="ribbon"></ion-icon>
@@ -96,7 +96,7 @@
 
                     <!-- Card 3 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="flash"></ion-icon>
@@ -111,7 +111,7 @@
 
                     <!-- Card 4 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="construct"></ion-icon>
@@ -190,6 +190,14 @@
                 </div>
             </div>
         </div>
+
+        <div class="container mt-5 text-center">
+    <img src="{{ asset('assets/img/dottedmap.png') }}" 
+         class="img-fluid rounded-4 mb-4" 
+         style="max-width: 990px; width: 100%; height: auto; object-fit: cover; 
+                -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
+                mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
+</div>
 
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
             <div class="container">

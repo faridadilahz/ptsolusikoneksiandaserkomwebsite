@@ -13,7 +13,7 @@ class BerandasController extends Controller
     {
         $artikels = Artikels::latest()->take(3)->get();
         $galeris = Galeris::latest()->take(3)->get();
-        $layanans  = Layanans::latest()->take(3)->get();
+        $layanans  = Layanans::latest()->take(4)->get();
 
         return view('guest.beranda', compact('artikels', 'galeris', 'layanans'));
     }
@@ -35,7 +35,7 @@ class BerandasController extends Controller
                   ->orWhere('deskripsiartikel', 'like', '%' . $request->search . '%');
         })->latest()->get();
 
-        return view('guest.artikel', compact('artikels'));
+        return view('guest.artikel.artikel', compact('artikels'));
     }
 
     public function galeri(Request $request)
@@ -45,7 +45,7 @@ class BerandasController extends Controller
                   ->orWhere('deskripsigaleri', 'like', '%' . $request->search . '%');
         })->latest()->get();
 
-        return view('guest.galeri', compact('galeris'));
+        return view('guest.galeri.galeri', compact('galeris'));
     }
 
     public function showLayanan($id)
@@ -57,12 +57,12 @@ class BerandasController extends Controller
     public function showArtikel($id)
     {
         $artikels = Artikels::findOrFail($id);
-        return view('guest.detailartikel', compact('artikels'));
+        return view('guest.artikel.detailartikel', compact('artikels'));
     }
 
     public function showGaleri($id)
     {
         $galeris = Galeris::findOrFail($id);
-        return view('guest.detailgaleri', compact('galeris'));
+        return view('guest.galeri.detailgaleri', compact('galeris'));
     }
 }
