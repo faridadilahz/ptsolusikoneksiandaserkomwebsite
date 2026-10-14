@@ -45,7 +45,7 @@
             <div class="container py-5">
                 <img src="{{ asset('assets/img/herobanner.jpg') }}" class="img-fluid rounded-3 mb-4"
                     style="aspect-ratio: 16 / 6; max-width: 1080px width: 100%; height: auto; object-fit: cover;">
-                <h1 class="fw-bolder mb-3 text-black">Mempercepat Pertumbuhan Bisnis dengan Teknologi Terkini!</h1>
+                <h1 class="fw-bolder mb-2 text-black">Mempercepat Pertumbuhan Bisnis dengan Teknologi Terkini!</h1>
                 <p class="text-secondary">PT Solusi Koneksi Anda didirikan dengan visi untuk
                     menjadi penyedia solusi teknologi terdepan di industri IT. Berawal dari layanan pengembangan
                     perangkat lunak dan website kustom, kami tumbuh menjadi perusahaan teknologi yang menawarkan solusi
