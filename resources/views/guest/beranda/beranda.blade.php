@@ -22,7 +22,7 @@
         @include('partials.guest.navbar.navbar')
     </header>
     <main style="background-color: #f5f5f5;">
-        <div class="d-flex min-vh-100 justify-content-center align-items-center text-white"
+        <div class="d-flex min-vh-100 justify-content-center align-items-center text-white px-3"
             style="background: linear-gradient(130deg, #4274d9 0%, #172a5096 100%), url('{{ asset('assets/img/herobanner.jpg') }}') center/cover no-repeat;">
             <div class="container">
                 <h1 class="fw-bolder fs-lg mb-2 text-white" style="max-width: 720px;">Selamat
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="d-flex text-center justify-content-center align-items-center">
+        <div class="d-flex text-center justify-content-center align-items-center px-3 py-5">
             <div class="container py-5">
                 <img src="{{ asset('assets/img/herobanner.jpg') }}" class="img-fluid rounded-4 mb-4"
                     style="aspect-ratio: 16 / 6; max-width: 1080px width: 100%; height: auto; object-fit: cover;">
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div class="d-flex text-center flex-column justify-content-center align-items-center px-5 py-5">
+        <div class="d-flex text-center flex-column justify-content-center align-items-center px-3 py-5">
             <h2 class="fw-bold mb-3">Mengapa PT Solusi Koneksi Anda?</h2>
             <div class="container my-4">
                 <div class="row g-4 justify-content-center">
@@ -127,7 +127,7 @@
         </div>
         </div>
 
-        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-3 py-5">
             <div class="container">
                 <div class="d-flex flex-column align-items-center justify-content-center mb-2">
                     <h2 class="fw-bolder mb-2">Layanan Kami</h2>
@@ -149,7 +149,7 @@
             </div>
         </div>
 
-        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-3 py-5">
             <div class="container">
                 <div class="d-flex flex-column align-items-center justify-content-center mb-2">
                     <h2 class="fw-bolder mb-2">Artikel Kami</h2>
@@ -170,7 +170,7 @@
             </div>
         </div>
 
-        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-3 py-5">
             <div class="container">
                 <div class="d-flex flex-column align-items-center justify-content-center mb-2">
                     <h2 class="fw-bolder mb-2">Galeri Kami</h2>
@@ -191,14 +191,14 @@
             </div>
         </div>
 
-        <div class="container mt-5 text-center">
+        <div class="container mt-5 text-center px-4">
             <img src="{{ asset('assets/img/dottedmap.png') }}" class="img-fluid rounded-4 mb-4"
                 style="max-width: 990px; width: 100%; height: auto; object-fit: cover; 
                 -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
                 mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
         </div>
 
-        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-5 py-5">
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
             <div class="container">
                 <div class="row g-4 justify-content-center">
                     @include('partials.guest.kontak.kontak')

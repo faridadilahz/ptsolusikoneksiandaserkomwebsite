@@ -1,4 +1,4 @@
-    <div class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top z-3 p-3 px-0 px-lg-5">
+    <div class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top z-3 p-3 px-0 px-lg-5 px-3">
         <div class="container-fluid position-relative">
             <a href="/login" class="d-flex align-items-center text-decoration-none">
                 <img src="{{ asset('assets/img/logomkawhite.png') }}" style="max-width: 40px; object-fit: cover;">
