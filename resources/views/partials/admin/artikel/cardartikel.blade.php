@@ -14,7 +14,7 @@
                 @endif
                 <div class="card-body text-start">
                     <small
-                        class="text-secondaryd-inline-flex align-items-center mb-2"><ion-icon name="calendar"
+                        class="text-secondary d-inline-flex align-items-center mb-2"><ion-icon name="calendar"
                         class="me-1"></ion-icon>{{ $item->created_at->locale('id')->translatedFormat('d F Y') }}</small>
                     <h5 class="card-title fw-bold">{{ Str::limit($item->judulartikel, 96) }}</h5>
                     <p class="card-text text-secondary">{{ Str::limit($item->deskripsiartikel, 124) }}</p>
