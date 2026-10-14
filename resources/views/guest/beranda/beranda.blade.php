@@ -139,12 +139,12 @@
                 </div>
                 <div class="row g-4 justify-content-center">
                     @include('partials.guest.layanan.cardlayanan')
+                </div>
 
-                    <div class="d-flex justify-content-center align-items-center">
-                        <a href="/layanan"
-                            class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat
-                            semua layanan <ion-icon name="arrow-forward"></ion-icon></a>
-                    </div>
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <a href="/layanan"
+                        class="btn btn-white text-primary d-inline-flex align-items-center justify-content-center gap-1">Lihat
+                        semua layanan <ion-icon name="arrow-forward"></ion-icon></a>
                 </div>
             </div>
         </div>
@@ -160,12 +160,12 @@
                 </div>
                 <div class="row g-4 justify-content-center">
                     @include('partials.guest.artikel.cardartikel')
+                </div>
 
-                    <div class="d-flex justify-content-center align-items-center">
-                        <a href="/artikel"
-                            class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat
-                            semua artikel <ion-icon name="arrow-forward"></ion-icon></a>
-                    </div>
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <a href="/artikel"
+                        class="btn btn-white text-primary d-inline-flex align-items-center justify-content-center gap-1">Lihat
+                        semua artikel <ion-icon name="arrow-forward"></ion-icon></a>
                 </div>
             </div>
         </div>
@@ -181,12 +181,12 @@
                 </div>
                 <div class="row g-4 justify-content-center">
                     @include('partials.guest.galeri.cardgaleri')
+                </div>
 
-                    <div class="d-flex justify-content-center align-items-center">
-                        <a href="/galeri"
-                            class="btn btn-white text-secondary d-inline-flex align-items-center justify-content-center gap-1">Lihat
-                            semua galeri <ion-icon name="arrow-forward"></ion-icon></a>
-                    </div>
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <a href="/galeri"
+                        class="btn btn-white text-primary d-inline-flex align-items-center justify-content-center gap-1">Lihat
+                        semua galeri <ion-icon name="arrow-forward"></ion-icon></a>
                 </div>
             </div>
         </div>
