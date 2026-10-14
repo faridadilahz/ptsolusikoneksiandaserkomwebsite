@@ -20,7 +20,7 @@
         <!-- place navbar here -->
     </header>
     <main>
-        <div class="d-flex min-vh-100 justify-content-center align-items-center text-white"
+        <div class="d-flex min-vh-100 justify-content-center align-items-center text-white px-3"
             style="background: linear-gradient(130deg, #4274d9 0%, #172a5096 100%), url('{{ asset('assets/img/herobanner.jpg') }}') center/cover no-repeat;">
             <div class="container">
                 <div class="row justify-content-center">
