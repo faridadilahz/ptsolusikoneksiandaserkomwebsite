@@ -27,7 +27,7 @@
                     <form action="{{ url()->current() }}" method="GET" class="d-flex gap-2 mb-4 w-100"
                         style="max-width: 580px;">
                         <input type="text" name="search" class="form-control border-0 rounded-3 p-2 p-md-3 px-3 px-md-4 flex-grow-1"
-                            placeholder="Cari..." value="{{ request('search') }}">
+                            placeholder="Cari artikel..." value="{{ request('search') }}">
                         <button type="submit" class="btn btn-primary px-3">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
