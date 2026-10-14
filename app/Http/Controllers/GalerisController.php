@@ -35,7 +35,7 @@ class GalerisController extends Controller
     {
         $request->validate([
             'judulgaleri' => 'required',
-            'gambargaleri' => 'required|image|mimes:png,jpg,webp|max:5012'
+            'gambargaleri' => 'required|image|mimes:png,jpg,jpeg,webp|max:5012'
         ]);
 
         $imagePath = $request->file('gambargaleri')->store('galeri', 'public');
@@ -73,7 +73,7 @@ class GalerisController extends Controller
     {
         $request->validate([
             'judulgaleri' => 'required',
-            'gambargaleri' => 'nullable|image|mimes:png,jpg,webp|max:5012'
+            'gambargaleri' => 'nullable|image|mimes:png,jpg,jpeg,webp|max:5012'
         ]);
 
         $galeris = Galeris::findOrFail($id);
