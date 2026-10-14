@@ -43,7 +43,7 @@
 
         <div class="d-flex text-center justify-content-center align-items-center px-3 py-5">
             <div class="container py-5">
-                <img src="{{ asset('assets/img/herobanner.jpg') }}" class="img-fluid rounded-4 mb-4"
+                <img src="{{ asset('assets/img/herobanner.jpg') }}" class="img-fluid rounded-3 mb-4"
                     style="aspect-ratio: 16 / 6; max-width: 1080px width: 100%; height: auto; object-fit: cover;">
                 <h1 class="fw-bolder mb-3 text-black">Mempercepat Pertumbuhan Bisnis dengan Teknologi Terkini!</h1>
                 <p class="text-secondary">PT Solusi Koneksi Anda didirikan dengan visi untuk
