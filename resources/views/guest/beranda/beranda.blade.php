@@ -67,7 +67,7 @@
                 <div class="row g-4 justify-content-center">
                     <!-- Card 1 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="document-text"></ion-icon>
@@ -82,7 +82,7 @@
 
                     <!-- Card 2 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="ribbon"></ion-icon>
@@ -96,7 +96,7 @@
 
                     <!-- Card 3 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="flash"></ion-icon>
@@ -111,7 +111,7 @@
 
                     <!-- Card 4 -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card h-100 rounded-4 border-0 py-3 px-3 shadow-sm">
+                        <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
                                 <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill p-3 mb-3">
                                     <ion-icon size="large" name="construct"></ion-icon>
