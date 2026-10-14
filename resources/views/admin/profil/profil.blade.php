@@ -37,7 +37,7 @@
                                     style="max-width: 140px;">
                                 <h4 class="card-title fw-bold mb-1">{{ $user->name ?? 'Admin PT Solusi Koneksi Anda' }}</h4>
                                 <p class="text-secondary mb-2">{{ $user->email ?? 'adminptska@gmail.com' }}</p>
-                                <a href="{{ route('admin.ubahprofil') }}" class="text-primary">Edit</a>
+                                <a href="{{ route('admin.ubahprofil') }}" class="text-primary">Edit<ion-icon name="pencil" class="ms-1" style="font-size: 14px;"></ion-icon></a>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             <a href="{{ route('admin.kelolakatasandi') }}" class="text-decoration-none">
                                 <div class="card-body p-4 d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h5 class="fw-bold mb-1 text-primary"><i class="fa-solid fa-key me-2"></i>Kelola
+                                        <h5 class="fw-bold mb-1 text-primary d-inline-flex align-items-center"><ion-icon name="lock-closed" class="me-2"></ion-icon>Kelola
                                             Kata Sandi</h5>
                                         <p class="text-secondary mb-0">Ubah kata sandi akun untuk menjaga keamanan.</p>
                                     </div>
@@ -64,7 +64,7 @@
                                 <button type="submit" class="btn btn-danger text-start w-100 p-0 border-0 shadow-none">
                                     <div class="card-body p-4 d-flex justify-content-between align-items-center">
                                         <div>
-                                            <h5 class="fw-bold mb-0 text-white"><ion-icon name="log-out"></ion-icon>Keluar dari Akun
+                                            <h5 class="fw-bold mb-0 text-white d-inline-flex align-items-center"><ion-icon name="log-out" class="me-2"></ion-icon>Keluar dari Akun
                                             </h5>
                                         </div>
                                         <i class="fa-solid fa-chevron-right text-secondary fs-5 text-white"></i>
