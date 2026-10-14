@@ -36,7 +36,7 @@ class ArtikelsController extends Controller
         $request->validate([
             'judulartikel' => 'required',
             'deskripsiartikel' => 'required',
-            'gambarartikel' => 'nullable|image|mimes:png,jpg,webp|max:5012',
+            'gambarartikel' => 'nullable|image|mimes:png,jpg,jpeg,webp|max:5012',
         ]);
 
         $imagePath = null;
@@ -79,7 +79,7 @@ class ArtikelsController extends Controller
         $request->validate([
             'judulartikel' => 'required',
             'deskripsiartikel' => 'required',
-            'gambarartikel' => 'nullable|image|mimes:png,jpg,webp|max:5012',
+            'gambarartikel' => 'nullable|image|mimes:png,jpg,jpeg,webp|max:5012',
         ]);
 
         $artikels = Artikels::findOrFail($id);
