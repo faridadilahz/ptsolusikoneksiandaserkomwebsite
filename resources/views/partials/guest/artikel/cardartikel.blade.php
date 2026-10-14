@@ -1,8 +1,8 @@
 @forelse ($artikels as $item)
     <div class="col-md-4 col-sm-6">
-        <div class="card h-100 rounded-4 shadow-sm border-0">
+        <div class="card h-100 rounded-3 shadow-sm border-0">
             @if ($item->gambarartikel)
-                <img src="{{ asset('storage/' . $item->gambarartikel) }}" class="card-img-top"
+                <img src="{{ asset('storage/' . $item->gambarartikel) }}" class="card-img-top rounded-top"
                     style="height: 200px; object-fit: cover;">
             @else
                 <div class="card-img-top bg-light d-flex flex-column align-items-center justify-content-center text-secondary"
