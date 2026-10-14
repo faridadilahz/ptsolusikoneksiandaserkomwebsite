@@ -1,6 +1,6 @@
 @forelse ($layanans as $item)
     <div class="col-md-3 col-sm-6">
-        <div class="card h-100 rounded-4 shadow-sm border-0">
+        <div class="card h-100 rounded-3 shadow-sm border-0">
             <div class="card-body text-start d-flex flex-column">
                 <div>
                     <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
