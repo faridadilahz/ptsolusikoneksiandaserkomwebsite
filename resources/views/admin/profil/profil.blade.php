@@ -59,15 +59,17 @@
 
                         <div class="card border-0 rounded-3 shadow-sm mb-3">
                             <form action="{{ route('logout') }}" method="post"
-                            onsubmit="return confirm('Apakah Anda yakin keluar dari akun ini?')">
-                            @csrf
-                            <button type="submit" class="btn btn-danger text-start w-100 p-0 border-0 shadow-none">
-                                <div class="card-body p-4 d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <h5 class="fw-bold mb-0 text-white"><i class="fa-solid fa-right-from-bracket me-2"></i>Keluar dari Akun</h5>
+                                onsubmit="return confirm('Apakah Anda yakin keluar dari akun ini?')">
+                                @csrf
+                                <button type="submit" class="btn btn-danger text-start w-100 p-0 border-0 shadow-none">
+                                    <div class="card-body p-4 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="fw-bold mb-0 text-white"><i
+                                                    class="fa-solid fa-right-from-bracket me-2"></i>Keluar dari Akun
+                                            </h5>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right text-secondary fs-5 text-white"></i>
                                     </div>
-                                    <i class="fa-solid fa-chevron-right text-secondary fs-5 text-white"></i>
-                                </div>
                                 </button>
                             </form>
                         </div>
@@ -83,6 +85,8 @@
         <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
