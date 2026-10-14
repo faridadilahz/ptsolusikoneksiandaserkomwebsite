@@ -35,7 +35,7 @@
 
                 <div>
                     <a href="https://wa.me/628988307081?text=Halo%20Admin%20PT%20Solusi%20Koneksi%20Anda"
-                        class="btn btn-light fw-semibold text-primary d-inline-flex align-items-center justify-content-center gap-1 p-2">Konsultasi
+                        class="btn btn-light fw-semibold text-primary d-inline-flex align-items-center justify-content-center gap-1 px-4 py-2">Konsultasi
                         Sekarang<ion-icon name="arrow-forward"></ion-icon></a>
                 </div>
             </div>
