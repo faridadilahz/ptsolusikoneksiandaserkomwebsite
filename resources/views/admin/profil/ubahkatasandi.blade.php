@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
     <head>
-        <title>Ubah Kata Sandi - Seycis</title>
+        <title>Ubah Kata Sandi - PT Solusi Koneksi Anda</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

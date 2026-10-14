@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>{{ $layanans->namalayanan }} - Seycis</title>
+    <title>{{ $layanans->namalayanan }} - PT Solusi Koneksi Anda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

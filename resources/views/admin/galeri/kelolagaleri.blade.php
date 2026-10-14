@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Kelola Galeri - Seycis</title>
+    <title>Kelola Galeri - PT Solusi Koneksi Anda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

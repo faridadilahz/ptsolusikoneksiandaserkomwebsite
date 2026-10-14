@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Profil - Seycis</title>
+    <title>Profil - PT Solusi Koneksi Anda</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,8 +35,8 @@
                                 class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
                                 <img src="{{ asset('assets/img/logomkablue.png') }}" class="rounded-3 mb-3"
                                     style="max-width: 140px;">
-                                <h4 class="card-title fw-bold mb-1">{{ $user->name ?? 'Admin Seycis' }}</h4>
-                                <p class="text-secondary mb-2">{{ $user->email ?? 'adminseycis@gmail.com' }}</p>
+                                <h4 class="card-title fw-bold mb-1">{{ $user->name ?? 'Admin PT Solusi Koneksi Anda' }}</h4>
+                                <p class="text-secondary mb-2">{{ $user->email ?? 'adminptska@gmail.com' }}</p>
                                 <a href="{{ route('admin.ubahprofil') }}" class="text-primary">Edit</a>
                             </div>
                         </div>
@@ -64,8 +64,7 @@
                                 <button type="submit" class="btn btn-danger text-start w-100 p-0 border-0 shadow-none">
                                     <div class="card-body p-4 d-flex justify-content-between align-items-center">
                                         <div>
-                                            <h5 class="fw-bold mb-0 text-white"><i
-                                                    class="fa-solid fa-right-from-bracket me-2"></i>Keluar dari Akun
+                                            <h5 class="fw-bold mb-0 text-white"><ion-icon name="log-out"></ion-icon>Keluar dari Akun
                                             </h5>
                                         </div>
                                         <i class="fa-solid fa-chevron-right text-secondary fs-5 text-white"></i>
