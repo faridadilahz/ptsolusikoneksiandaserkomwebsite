@@ -45,7 +45,7 @@
         </div>
     </main>
     <footer>
-        @include('partials.guest.footer')
+        @include('partials.guest.footer.footer')
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
