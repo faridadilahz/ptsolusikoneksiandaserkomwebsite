@@ -36,11 +36,10 @@
     </div>
 
 @empty
-    <!-- Tampilan jika tidak ada layanan -->
     <div class="col-12 py-5">
         <div class="text-secondary text-center">
-            <i class="fa-solid fa-lightbulb fs-1 mb-3"></i>
-            <h5>Belum Ada Layanan Jurusan</h5>
+            <ion-icon name="pricetag" class="mb-2" style="font-size: 36px;"></ion-icon>
+            <h5>Belum Ada Layanan</h5>
             <p class="small">Klik tombol "Posting Layanan" di atas untuk menambahkan layanan baru.</p>
         </div>
     </div>
