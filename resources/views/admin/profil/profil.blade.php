@@ -12,7 +12,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/logomkablue.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logoskablue.png') }}">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                         <div class="card border-0 rounded-3 shadow-sm h-100">
                             <div
                                 class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
-                                <img src="{{ asset('assets/img/logomkablue.png') }}" class="rounded-3 mb-3"
+                                <img src="{{ asset('assets/img/logoskablue.png') }}" class="rounded-3 mb-3"
                                     style="max-width: 140px;">
                                 <h4 class="card-title fw-bold mb-1">{{ $user->name ?? 'Admin PT Solusi Koneksi Anda' }}
                                 </h4>

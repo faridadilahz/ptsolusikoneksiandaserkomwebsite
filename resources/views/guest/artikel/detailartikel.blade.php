@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/logomkablue.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logoskablue.png') }}">
 </head>
 
 <body>
