@@ -6,6 +6,7 @@ use App\Models\Dashboard;
 use App\Models\Layanans;
 use App\Models\Artikels;
 use App\Models\Galeris;
+use App\Models\Pesans;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -18,8 +19,9 @@ class DashboardController extends Controller
         $totalLayanan = Layanans::count();
         $totalArtikel = Artikels::count();
         $totalGaleri = Galeris::count();
+        $totalPesan = Pesans::count();
 
-        return view('admin.dasbor.dasbor', compact('totalLayanan', 'totalArtikel', 'totalGaleri'));
+        return view('admin.dasbor.dasbor', compact('totalLayanan', 'totalArtikel', 'totalGaleri', 'totalPesan'));
     }
 
     /**
