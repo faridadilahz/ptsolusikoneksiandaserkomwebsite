@@ -7,16 +7,20 @@ use App\Models\Pesans;
 
 class PesansController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $pesans = Pesans::latest()->get();
+        $pesans = Pesans::when($request->search, function ($query) use ($request) {
+            $query->where('nama_lengkap', 'like', '%' . $request->search . '%')
+                ->orWhere('email', 'like', '%' . $request->search . '%')
+                ->orWhere('pesan', 'like', '%' . $request->search . '%');
+        })->latest()->get();
         return view('admin.pesan.kelolapesan', compact('pesans'));
     }
 
     public function show($id)
     {
         $pesan = Pesans::findOrFail($id);
-        
+
         if ($pesan->status == 'belum_dibaca') {
             $pesan->update(['status' => 'sudah_dibaca']);
         }
