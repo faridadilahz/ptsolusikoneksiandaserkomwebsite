@@ -24,9 +24,6 @@
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
 
             <div class="container-fluid">
-                @if (session('success'))
-                    <div class="alert alert-success">{{ session('success') }}</div>
-                @endif
                 <div class="row g-4">
 
                     <div class="col-lg-4">
