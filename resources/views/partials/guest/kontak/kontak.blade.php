@@ -1,8 +1,8 @@
-<div class="card border-0 text-white bg-primary position-relative overflow-hidden p-4 p-lg-5"
+<div class="card w-lg-75 border-0 text-white bg-primary position-relative overflow-hidden p-4 p-lg-4"
     style="border-radius: 28px;">
 
     <div class="position-absolute end-0 top-50 translate-middle-y opacity-25 pointer-events-none d-none d-md-block"
-        style="width: 420px; right: -144px !important;">
+        style="width: 360px; right: -144px !important;">
         <img src="{{ asset('assets/img/logoskawhite.png') }}" alt="Watermark Logo PT SKA" class="w-100 h-auto d-block"
             style="object-fit: contain;">
     </div>

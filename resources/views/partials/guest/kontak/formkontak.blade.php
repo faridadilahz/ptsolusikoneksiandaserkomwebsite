@@ -1,4 +1,4 @@
-<div class="card w-50 border-0 rounded-4 p-4 p-lg-4 bg-white">
+<div class="card w-lg-75 border-0 rounded-4 p-4 p-lg-4 bg-white">
     <div class="mb-4 text-start">
         <h3 class="fw-bold text-dark mb-2">Kirim Pesan</h3>
         <p class="text-secondary mb-0">Hubungi tim PT Solusi Koneksi Anda langsung melalui formulir di bawah ini.</p>
