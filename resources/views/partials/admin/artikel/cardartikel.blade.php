@@ -37,10 +37,9 @@
     </div>
 
 @empty
-    <!-- Tampilan jika tidak ada artikel -->
     <div class="col-12 py-5">
         <div class="text-secondary text-center">
-            <i class="fa-solid fa-newspaper fs-1 mb-3"></i>
+            <ion-icon name="newspaper" class="mb-2" style="font-size: 36px;"></ion-icon>
             <h5>Belum Ada Artikel</h5>
             <p class="small">Klik tombol "Posting Artikel" di atas untuk menambahkan artikel baru.</p>
         </div>
