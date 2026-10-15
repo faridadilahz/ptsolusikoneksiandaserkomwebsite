@@ -9,9 +9,9 @@
         <p class="text-secondary mb-0">Tambah, ubah, atau hapus postingan galeri sekolah.</p>
     </div>
 
-    <div class="topbar-right d-flex align-items-center gap-2 w-100 w-lg-auto justify-content-between justify-content-lg-end">
+    <div class="topbar-right d-flex align-items-center gap-2">
         {{-- Search Bar Simpel --}}
-        <form action="{{ url()->current() }}" method="GET" class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-0 me-lg-2">
+        <form action="{{ url()->current() }}" method="GET" class="search-form">
             <div class="input-group">
                 <input type="text" name="search" class="form-control bg-light border-0" placeholder="Cari galeri..." value="{{ request('search') }}">
                 <button class="btn btn-light border-0" type="submit">
@@ -33,7 +33,13 @@
 </header>
 
 <style>
-    @media (max-width: 992px) {
+    @media (max-width: 991.98px) {
+
+        .topbar-right,
+        .search-form {
+            width: 100%;
+        }
+
         .btn-fab {
             position: fixed !important;
             bottom: 24px;
@@ -46,6 +52,12 @@
             align-items: center;
             justify-content: center;
             font-size: 16px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .search-form .input-group {
+            min-width: 220px;
         }
     }
 </style>

@@ -2,7 +2,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<header class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center bg-white p-3 mb-4 rounded-3 gap-3">
+<header
+    class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center bg-white p-3 mb-4 rounded-3 gap-3">
 
     <div class="topbar-left">
         <h4 class="fw-bold mb-1">Kelola Artikel</h4>
@@ -13,7 +14,8 @@
         {{-- Search Bar Simpel --}}
         <form action="{{ url()->current() }}" method="GET" class="search-form">
             <div class="input-group">
-                <input type="text" name="search" class="form-control bg-light border-0" placeholder="Cari artikel..." value="{{ request('search') }}">
+                <input type="text" name="search" class="form-control bg-light border-0"
+                    placeholder="Cari artikel..." value="{{ request('search') }}">
                 <button class="btn btn-light border-0" type="submit">
                     <i class="fa-solid fa-magnifying-glass text-secondary"></i>
                 </button>
