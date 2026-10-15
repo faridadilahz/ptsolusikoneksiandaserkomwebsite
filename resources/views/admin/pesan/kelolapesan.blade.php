@@ -50,7 +50,7 @@
                                                 @if ($item->status == 'belum_dibaca')
                                                     <span class="badge bg-warning text-dark rounded-pill">Belum Dibaca</span>
                                                 @else
-                                                    <span class="badge bg-secondary rounded-pill">Sudah Dibaca</span>
+                                                    <span class="badge bg-primary rounded-pill">Sudah Dibaca</span>
                                                 @endif
                                             </td>
                                             <td class="text-end pe-4">
