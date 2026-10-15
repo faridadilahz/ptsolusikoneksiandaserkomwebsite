@@ -9,7 +9,7 @@
         <p class="text-secondary mb-0">Tambah, ubah, atau hapus postingan galeri sekolah.</p>
     </div>
 
-    <div class="topbar-right d-flex align-items-center gap-2">
+    <div class="topbar-right d-flexs align-items-center gap-2">
         {{-- Search Bar Simpel --}}
         <form action="{{ url()->current() }}" method="GET" class="search-form">
             <div class="input-group">
