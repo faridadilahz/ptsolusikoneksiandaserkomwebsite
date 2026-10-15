@@ -28,8 +28,8 @@
                         style="max-width: 580px;">
                         <input type="text" name="search" class="form-control border-0 rounded-3 p-2 p-md-3 px-3 px-md-4 flex-grow-1"
                             placeholder="Cari layanan..." value="{{ request('search') }}">
-                        <button type="submit" class="btn btn-primary px-3">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                        <button type="submit" class="btn btn-primary d-inline-flex align-items-center px-3">
+                            <ion-icon name="search"></ion-icon>
                         </button>
                         @if (request('search'))
                             <a href="{{ url()->current() }}"
