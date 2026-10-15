@@ -19,7 +19,7 @@
     <div class="col-12 py-5">
         <div class="text-secondary text-center">
             <ion-icon name="images" class="mb-2" style="font-size: 32px;"></ion-icon>
-            <h5>Belum ada galeri</h5>
+            <h5>Belum ada galeris</h5>
         </div>
     </div>
 @endforelse
