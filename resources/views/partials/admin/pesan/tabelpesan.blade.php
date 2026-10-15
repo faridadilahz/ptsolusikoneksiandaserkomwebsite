@@ -27,11 +27,11 @@
                                 @endif
                             </td>
                             <td class="text-end pe-4">
-                                <a href="{{ route('admin.pesan.show', $item->id) }}"
+                                <a href="{{ route('pesan.show', $item->id) }}"
                                     class="btn btn-sm btn-primary rounded-2 me-1">
                                     Lihat Detail
                                 </a>
-                                <form action="{{ route('admin.pesan.destroy', $item->id) }}" method="POST" class="d-inline"
+                                <form action="{{ route('pesan.destroy', $item->id) }}" method="POST" class="d-inline"
                                     onsubmit="return confirm('Yakin ingin menghapus pesan ini?')">
                                     @csrf
                                     @method('DELETE')
