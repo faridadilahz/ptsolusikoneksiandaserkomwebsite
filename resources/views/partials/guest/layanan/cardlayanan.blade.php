@@ -10,7 +10,8 @@
                 <h5 class="card-title fw-bold">{{ Str::limit($item->namalayanan, 96) }}</h5>
                 <p class="card-text text-secondary">{{ Str::limit($item->deskripsilayanan, 96) }}</p>
                 <div class="mt-auto align-items-start">
-                    <a href="{{ route('guest.detaillayanan', $item->id) }}" class="d-inline-flex align-items-center fw-semibold text-decoration-none text-primary">Baca
+                    <a href="{{ route('guest.detaillayanan', $item->id) }}"
+                        class="d-inline-flex align-items-center fw-semibold text-decoration-none text-primary">Baca
                         Selengkapnya<ion-icon name="arrow-forward" class="ms-1"></ion-icon></a>
                 </div>
             </div>
