@@ -2,18 +2,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<header class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center bg-white p-3 mb-4 rounded-3 gap-3">
+<header
+    class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center bg-white p-3 mb-4 rounded-3 gap-3">
 
     <div class="topbar-left">
         <h4 class="fw-bold mb-1">Kelola Layanan</h4>
         <p class="text-secondary mb-0">Tambah, ubah, atau hapus postingan layanan PT Solusi Koneksi Anda.</p>
     </div>
 
-    <div class="topbar-right d-flex align-items-center gap-2 w-100 w-lg-auto justify-content-between justify-content-lg-end">
-        
-        <form action="{{ url()->current() }}" method="GET" class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-0 me-lg-2">
+    <div class="topbar-right d-flex align-items-center gap-2">
+        <form action="{{ url()->current() }}" method="GET" class="search-form">
             <div class="input-group">
-                <input type="text" name="search" class="form-control bg-light border-0" placeholder="Cari layanan..." value="{{ request('search') }}">
+                <input type="text" name="search" class="form-control bg-light border-0"
+                    placeholder="Cari layanan..." value="{{ request('search') }}">
                 <button class="btn btn-light border-0" type="submit">
                     <i class="fa-solid fa-magnifying-glass text-secondary"></i>
                 </button>
@@ -30,10 +31,17 @@
             <span class="d-none d-lg-inline">Tambah Layanan</span>
         </a>
     </div>
+
 </header>
 
 <style>
-    @media (max-width: 992px) {
+    @media (max-width: 991.98px) {
+
+        .topbar-right,
+        .search-form {
+            width: 100%;
+        }
+
         .btn-fab {
             position: fixed !important;
             bottom: 24px;
@@ -46,6 +54,12 @@
             align-items: center;
             justify-content: center;
             font-size: 16px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .search-form .input-group {
+            min-width: 220px;
         }
     }
 </style>
