@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-5 col-lg-5">
-                        <div class="card h-100 border-0 px-3 py-4">
+                        <div class="card h-100 border-0 px-4 py-4">
                             <div class="text-center">
                                 <h3 class="card-title fw-bold">Masuk</h3>
                                 <p class="text-secondary">Masuk ke Admin PT Solusi Koneksi Anda</p>
