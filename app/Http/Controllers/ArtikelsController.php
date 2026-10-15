@@ -12,13 +12,14 @@ class ArtikelsController extends Controller
      * Display a listing of the resource.
      */
     public function index(Request $request)
-{
-    $artikels = Artikels::when($request->search, function ($query) use ($request) {
-        $query->where('judulartikel', 'like', '%' . $request->search . '%');
-    })->latest()->get();
+    {
+        $artikels = Artikels::when($request->search, function ($query) use ($request) {
+            $query->where('judulartikel', 'like', '%' . $request->search . '%')
+                ->orWhere('deskripsiartikel', 'like', '%' . $request->search . '%');
+        })->latest()->get();
 
-    return view('admin.artikel.kelolaartikel', compact('artikels'));
-}
+        return view('admin.artikel.kelolaartikel', compact('artikels'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -57,7 +58,8 @@ class ArtikelsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id) {
+    public function show($id)
+    {
         $artikels = Artikels::findOrFail($id);
         return view('admin.artikel.detailartikel', compact('artikels'));
     }
