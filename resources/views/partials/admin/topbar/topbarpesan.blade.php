@@ -2,6 +2,6 @@
 
     <div class="topbar-left">
         <h4 class="fw-bold">Kelola Pesan Masuk</h4>
-        <p class="text-secondary">Pantau, baca, atau hapus pesan.</p>
+        <p class="text-secondary mb-0">Pantau, baca, atau hapus pesan.</p>
     </div>
 </header>
