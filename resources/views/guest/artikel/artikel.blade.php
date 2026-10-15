@@ -29,13 +29,13 @@
                         <input type="text" name="search"
                             class="form-control border-0 rounded-3 p-2 p-md-3 px-3 px-md-4 flex-grow-1"
                             placeholder="Cari artikel..." value="{{ request('search') }}">
-                        <button type="submit" class="btn btn-primary px-3">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                        <button type="submit" class="btn btn-primary d-inline-flex align-items-center px-3">
+                            <ion-icon name="search"></ion-icon>
                         </button>
                         @if (request('search'))
                             <a href="{{ url()->current() }}"
-                                class="btn btn-outline-secondary px-3 d-flex align-items-center justify-content-center"><i
-                                    class="fa-solid fa-close"></i></a>
+                                class="btn btn-outline-secondary px-3 d-flex align-items-center justify-content-center"><ion-icon
+                                    name="close"></ion-icon></a>
                         @endif
                     </form>
                 </div>
