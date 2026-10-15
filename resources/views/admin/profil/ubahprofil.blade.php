@@ -23,9 +23,6 @@
         @include('partials.admin.sidebar.sidebar')
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid">
-                @if (session('success'))
-                    <div class="alert alert-success">{{ session('success') }}</div>
-                @endif
 
                 @if ($errors->any())
                     <div class="alert alert-danger alert-dismissible fade show mb-4 border-0 shadow-sm" role="alert">
