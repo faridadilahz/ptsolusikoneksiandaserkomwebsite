@@ -35,9 +35,11 @@
                                 class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
                                 <img src="{{ asset('assets/img/logomkablue.png') }}" class="rounded-3 mb-3"
                                     style="max-width: 140px;">
-                                <h4 class="card-title fw-bold mb-1">{{ $user->name ?? 'Admin PT Solusi Koneksi Anda' }}</h4>
+                                <h4 class="card-title fw-bold mb-1">{{ $user->name ?? 'Admin PT Solusi Koneksi Anda' }}
+                                </h4>
                                 <p class="text-secondary mb-2">{{ $user->email ?? 'adminptska@gmail.com' }}</p>
-                                <a href="{{ route('admin.ubahprofil') }}" class="text-primary">Edit<ion-icon name="pencil" class="ms-1" style="font-size: 14px;"></ion-icon></a>
+                                <a href="{{ route('admin.ubahprofil') }}" class="text-primary">Edit<ion-icon
+                                        name="pencil" class="ms-1" style="font-size: 14px;"></ion-icon></a>
                             </div>
                         </div>
                     </div>
@@ -45,30 +47,31 @@
                     <div class="col-lg-8">
 
                         <div class="card border-0 rounded-3 shadow-sm mb-3">
-                            <a href="{{ route('admin.kelolakatasandi') }}" class="text-decoration-none">
-                                <div class="card-body p-4 d-flex justify-content-between align-items-center">
+                            <a href="{{ route('admin.kelolakatasandi') }}" class="text-decoration-none p-1">
+                                <div class="card-body d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h5 class="fw-bold mb-1 text-primary d-inline-flex align-items-center"><ion-icon name="lock-closed" class="me-2"></ion-icon>Kelola
-                                            Kata Sandi</h5>
+                                        <h5 class="fw-bold mb-1 text-primary d-inline-flex align-items-center">
+                                            <ion-icon name="lock-closed" class="me-2 fs-4"></ion-icon>
+                                            <span>Kelola Kata Sandi</span>
+                                        </h5>
                                         <p class="text-secondary mb-0">Ubah kata sandi akun untuk menjaga keamanan.</p>
                                     </div>
-                                    <i class="fa-solid fa-chevron-right text-secondary fs-5"></i>
+                                    <ion-icon name="chevron-forward" class="text-secondary fs-4"></ion-icon>
                                 </div>
                             </a>
                         </div>
 
-                        <div class="card border-0 rounded-3 shadow-sm mb-3">
+                        <div class="card border-0 rounded-3 shadow-sm bg-danger overflow-hidden">
                             <form action="{{ route('logout') }}" method="post"
                                 onsubmit="return confirm('Apakah Anda yakin keluar dari akun ini?')">
                                 @csrf
-                                <button type="submit" class="btn btn-danger text-start w-100 p-0 border-0 shadow-none">
-                                    <div class="card-body p-4 d-flex justify-content-between align-items-center">
-                                        <div>
-                                            <h5 class="fw-bold mb-0 text-white d-inline-flex align-items-center"><ion-icon name="log-out" class="me-2"></ion-icon>Keluar dari Akun
-                                            </h5>
-                                        </div>
-                                        <i class="fa-solid fa-chevron-right text-secondary fs-5 text-white"></i>
-                                    </div>
+                                <button type="submit"
+                                    class="btn text-start w-100 p-3 border-0 shadow-none text-white d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold fs-5 d-inline-flex align-items-center mb-0">
+                                        <ion-icon name="log-out" class="me-2 fs-4"></ion-icon>
+                                        Keluar dari Akun
+                                    </span>
+                                    <ion-icon name="chevron-forward" class="fs-5 text-white"></ion-icon>
                                 </button>
                             </form>
                         </div>
