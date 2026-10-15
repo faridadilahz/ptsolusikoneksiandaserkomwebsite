@@ -15,7 +15,7 @@
                 <tbody>
                     @forelse ($pesans as $index => $item)
                         <tr>
-                            <td class="ps-4">{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $index + 1 }}</td>
                             <td class="fw-semibold">{{ $item->nama_lengkap }}</td>
                             <td>{{ $item->email }}</td>
                             <td>{{ $item->created_at->locale('id')->translatedFormat('d M Y H:i') }}</td>
