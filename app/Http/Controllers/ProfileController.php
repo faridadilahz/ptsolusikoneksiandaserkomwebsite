@@ -45,7 +45,7 @@ class ProfileController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return redirect()->route('admin.profil.kelolakatasandi')->with('success', 'Kata sandi berhasil diperbarui!');
+        return redirect()->route('admin.kelolakatasandi')->with('success', 'Kata sandi berhasil diperbarui!');
     }
 
     public function ubahprofil() {
