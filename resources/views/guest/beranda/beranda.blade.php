@@ -193,7 +193,7 @@
 
         <div class="container mt-5 text-center px-4">
             <img src="{{ asset('assets/img/dottedmap.png') }}" class="img-fluid mb-4"
-                style="max-width: 990px; width: 100%; height: auto; object-fit: cover; 
+                style="max-width: 1080px; width: 100%; height: auto; object-fit: cover; 
                 -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
                 mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
         </div>
