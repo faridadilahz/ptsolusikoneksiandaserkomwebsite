@@ -13,7 +13,7 @@
         <form action="{{ url()->current() }}" method="GET" class="search-form">
             <div class="input-group">
                 <input type="text" name="search" class="form-control px-3 py-2 bg-light border-0"
-                    placeholder="Cari pesan atau pengguna..." value="{{ request('search') }}">
+                    placeholder="Cari nama atau email..." value="{{ request('search') }}">
                 <button class="btn btn-light border-0" type="submit">
                     <i class="fa-solid fa-magnifying-glass text-secondary"></i>
                 </button>
