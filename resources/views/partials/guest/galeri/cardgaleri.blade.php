@@ -18,7 +18,7 @@
 @empty
     <div class="col-12 py-5">
         <div class="text-secondary text-center">
-            <i class="fa-solid fa-image fs-1 mb-3"></i>
+            <ion-icon name="images" class="mb-2" style="font-size: 32px;"></ion-icon>
             <h5>Belum ada galeri</h5>
         </div>
     </div>
