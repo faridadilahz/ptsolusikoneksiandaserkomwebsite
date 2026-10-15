@@ -1,6 +1,6 @@
-<div class="card w-lg-75 border-0 rounded-4 p-4 p-lg-4 bg-white">
-    <div class="mb-4 text-start">
-        <h3 class="fw-bold text-dark mb-2">Kirim Pesan</h3>
+<div class="card border-0 rounded-4 p-4 p-lg-4 bg-white mx-auto" style="max-width: 720px;">
+    <div class="mb-4 text-center">
+        <h3 class="fw-bold text-dark mb-2">Punya Pertanyaan? Hubungi Kami</h3>
         <p class="text-secondary mb-0">Hubungi tim PT Solusi Koneksi Anda langsung melalui formulir di bawah ini.</p>
     </div>
 
