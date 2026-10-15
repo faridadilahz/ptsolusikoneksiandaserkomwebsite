@@ -3,7 +3,7 @@
 
     <div class="d-flex justify-content-between align-items-center mb-lg-4">
         <a href="{{ route('dasbor') }}" class="d-flex align-items-center text-decoration-none px-2">
-            <img src="{{ asset('assets/img/logomkablue.png') }}" alt="Logo PT Solusi Koneksi Anda" class="me-1"
+            <img src="{{ asset('assets/img/logoskablue.png') }}" alt="Logo PT Solusi Koneksi Anda" class="me-1"
                 style="max-width: 36px; object-fit: cover;">
             <span class="fs-4 fw-bold text-primary">PT SKA</span>
         </a>
@@ -48,6 +48,14 @@
                     aria-current="page">
                     <ion-icon name="images" class="fs-5 me-3"></ion-icon>
                     <span>Kelola Galeri</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('pesan') }}"
+                    class="nav-link d-flex align-items-center mb-2 text-primary {{ request()->is('admin/pesan*') ? 'active text-white' : '' }}"
+                    aria-current="page">
+                    <ion-icon name="chatbubbles" class="fs-5 me-3"></ion-icon>
+                    <span>Kelola Pesan</span>
                 </a>
             </li>
         </ul>

@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LayanansController;
 use App\Http\Controllers\ArtikelsController;
 use App\Http\Controllers\GalerisController;
+use App\Http\Controllers\PesansController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Galeris;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,8 @@ Route::get('/artikel/{id}', [BerandasController::class, 'showArtikel'])->name('g
 Route::get('/galeri', [BerandasController::class, 'galeri']);
 Route::get('/galeri/{id}', [BerandasController::class, 'showGaleri'])->name('guest.detailgaleri');
 
+Route::post('/kontak/kirim', [BerandasController::class, 'kirimKontak'])->name('kontak.kirim');
+
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
@@ -37,7 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/layanan', [LayanansController::class, 'index'])->name('layanan');
     Route::get('admin/layanan/tambah-layanan', [LayanansController::class, 'create'])->name('layanan.add');
     Route::post('admin/layanan/tambah-layanan', [LayanansController::class, 'store'])->name('layanan.store');
-    
+
     Route::get('admin/layanan/edit-layanan/{id}', [LayanansController::class, 'edit'])->name('layanan.edit');
     Route::put('admin/layanan/{id}', [LayanansController::class, 'update'])->name('layanan.update');
     Route::delete('admin/layanan/{id}', [LayanansController::class, 'destroy'])->name('layanan.destroy');
@@ -61,10 +64,14 @@ Route::middleware(['auth'])->group(function () {
     Route::put('admin/galeri/{id}', [GalerisController::class, 'update'])->name('galeri.update');
     Route::delete('admin/galeri/{id}', [GalerisController::class, 'destroy'])->name('galeri.destroy');
 
+    Route::get('admin/pesan', [PesansController::class, 'index'])->name('pesan');
+    Route::get('admin/pesan/{id}', [PesansController::class, 'show'])->name('pesan.show');
+    Route::delete('admin/pesan/{id}', [PesansController::class, 'destroy'])->name('pesan.destroy');
+
     Route::get('admin/profil', [ProfileController::class, 'index'])->name('profil');
 
     Route::get('admin/ubahprofil', [ProfileController::class, 'ubahprofil'])->name('admin.ubahprofil');
-Route::put('admin/updateprofil', [ProfileController::class, 'editprofil'])->name('admin.updateprofil');
+    Route::put('admin/updateprofil', [ProfileController::class, 'editprofil'])->name('admin.updateprofil');
 
     Route::get('admin/kelolakatasandi', [ProfileController::class, 'kelolakatasandi'])->name('admin.kelolakatasandi');
     Route::get('admin/ubahkatasandi', [ProfileController::class, 'ubahkatasandi'])->name('admin.ubahkatasandi');

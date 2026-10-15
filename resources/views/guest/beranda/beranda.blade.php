@@ -201,6 +201,14 @@
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
             <div class="container">
                 <div class="row g-4 justify-content-center">
+                    @include('partials.guest.kontak.formkontak')
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
                     @include('partials.guest.kontak.kontak')
                 </div>
             </div>

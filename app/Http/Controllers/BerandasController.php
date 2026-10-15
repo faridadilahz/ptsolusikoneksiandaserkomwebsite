@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pesans;
 use App\Models\Layanans;
 use App\Models\Artikels;
 use App\Models\Galeris;
+use App\Mail\KontakMail;
+use Illuminate\Support\Facades\Mail;
 
 class BerandasController extends Controller
 {
@@ -64,4 +67,30 @@ class BerandasController extends Controller
         $galeris = Galeris::findOrFail($id);
         return view('guest.galeri.detailgaleri', compact('galeris'));
     }
+
+    public function kirimKontak(Request $request)
+{
+    $validated = $request->validate([
+        'nama_lengkap' => 'required|string|max:255',
+        'email'        => 'required|email|max:255',
+        'pesan'        => 'required|string',
+    ], [
+        'nama_lengkap.required' => 'Nama lengkap wajib diisi.',
+        'email.required'        => 'Email wajib diisi.',
+        'email.email'           => 'Format email tidak valid.',
+        'pesan.required'        => 'Pesan tidak boleh kosong.',
+    ]);
+
+    // 1. Simpan Pesan ke Database untuk Dashboard Admin
+    Pesans::create($validated);
+
+    // 2. Kirim Notifikasi Email ke papatonqs@gmail.com
+    try {
+        Mail::to('papatonqs@gmail.com')->send(new KontakMail($validated));
+    } catch (\Exception $e) {
+        // Mencegah error jika koneksi SMTP/internet lokal sedang offline saat testing
+    }
+
+    return back()->with('success', 'Pesan Anda berhasil terkirim! Tim kami akan segera menghubungi Anda.');
+}
 }
