@@ -24,6 +24,11 @@
 
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="mx-auto" style="max-width: 850px">
+
+                @if (session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
+                
                 <div class="d-flex justify-content-between align-items-center w-100 mb-4">
                     <a href="/admin/artikel"
                         class="text-decoration-none d-inline-flex align-items-center text-secondary">
