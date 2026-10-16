@@ -60,10 +60,11 @@ class GalerisController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         $galeris = Galeris::findOrFail($id);
-        return view('admin.galeri.editgaleri', compact('galeris'));
+        $from = $request->query('from');
+        return view('admin.galeri.editgaleri', compact('galeris', 'from'));
     }
 
     /**
@@ -88,6 +89,10 @@ class GalerisController extends Controller
 
         $galeris->judulgaleri = $request->judulgaleri;
         $galeris->save();
+
+        if ($request->redirect_to === 'detail') {
+            return redirect()->route('galeri.show', $id)->with('success', 'Galeri berhasil diperbarui!');
+        }
 
         return redirect()->route('galeri')->with('success', 'Galeri berhasil diperbarui!');
     }

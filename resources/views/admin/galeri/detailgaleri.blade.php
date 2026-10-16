@@ -24,9 +24,28 @@
 
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="mx-auto" style="max-width: 850px">
-                <div class="mb-4 text-start">
-                    <a href="/admin/galeri" class="text-decoration-none text-secondary mb-2"><i
-                            class="fa-solid fa-arrow-left me-2"></i>Kembali</a>
+                <div class="d-flex justify-content-between align-items-center w-100 mb-4">
+                    <a href="/admin/galeri"
+                        class="text-decoration-none d-inline-flex align-items-center text-secondary">
+                        <ion-icon name="arrow-back" class="me-1 fs-5"></ion-icon>Kembali
+                    </a>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="{{ route('galeri.edit', ['id' => $galeris->id, 'from' => 'detail']) }}"
+                            class="btn btn-primary d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
+                            <ion-icon name="create" class="me-1 fs-5"></ion-icon>Edit Layanan
+                        </a>
+
+                        <form action="{{ route('galeri.destroy', $galeris->id) }}" method="POST" class="d-inline"
+                            onsubmit="return confirm('Apakah Anda yakin ingin menghapus layanan ini?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"
+                                class="btn btn-outline-danger d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
+                                <ion-icon name="trash" class="me-1 fs-5"></ion-icon>Hapus Layanan
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 <div class="d-flex text-center flex-column justify-content-center align-items-center">
 

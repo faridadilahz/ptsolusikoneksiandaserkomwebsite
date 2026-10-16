@@ -28,6 +28,8 @@
                     @csrf
                     @method('PUT')
 
+                    <input type="hidden" name="redirect_to" value="{{ $from ?? 'index' }}">
+
                     @if ($galeris->gambargaleri)
                         <div class="mb-2">
                             <img src="{{ asset('storage/' . $galeris->gambargaleri) }}" class="rounded-3"
@@ -52,7 +54,7 @@
 
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
-                        <a href="{{ route('galeri') }}" class="btn btn-outline-primary">Batal</a>
+                        <a href="{{ route('galeri') }}" onclick="history.back(); return false;" class="btn btn-outline-primary">Batal</a>
                     </div>
 
                 </form>
