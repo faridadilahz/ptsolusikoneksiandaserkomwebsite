@@ -50,7 +50,7 @@
 
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
-                        <a href="{{ route('layanan') }}" class="btn btn-outline-primary">Batal</a>
+                        <a href="{{ route('layanan') }}"  onclick="history.back(); return false;" class="btn btn-outline-primary">Batal</a>
                     </div>
 
                 </form>
