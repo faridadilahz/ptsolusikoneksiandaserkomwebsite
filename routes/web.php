@@ -13,21 +13,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/beranda');
 
-Route::get('/beranda', [BerandasController::class, 'showBeranda']);
+Route::get('/beranda', [BerandasController::class, 'showBeranda'])->name('guest.beranda');
 Route::post('/review/store', [BerandasController::class, 'storeReview'])->name('review.store');
 
-Route::get('/layanan', [BerandasController::class, 'layanan']);
+Route::get('/layanan', [BerandasController::class, 'layanan'])->name('guest.layanan');
 Route::get('/layanan/{id}', [BerandasController::class, 'showLayanan'])->name('guest.detaillayanan');
 
-Route::get('/artikel', [BerandasController::class, 'artikel']);
+Route::get('/artikel', [BerandasController::class, 'artikel'])->name('guest.artikel');
 Route::get('/artikel/{id}', [BerandasController::class, 'showArtikel'])->name('guest.detailartikel');
 
-Route::get('/galeri', [BerandasController::class, 'galeri']);
+Route::get('/galeri', [BerandasController::class, 'galeri'])->name('guest.galeri');
 Route::get('/galeri/{id}', [BerandasController::class, 'showGaleri'])->name('guest.detailgaleri');
 
 Route::get('/kontak', function () {
     return view('guest.kontak.kontak');
-})->name('kontak');
+})->name('guest.kontak');
 Route::post('/kontak/kirim', [BerandasController::class, 'kirimKontak'])->name('kontak.kirim');
 
 Route::get('/login', function () {

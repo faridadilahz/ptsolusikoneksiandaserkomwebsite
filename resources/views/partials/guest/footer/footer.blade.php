@@ -1,14 +1,14 @@
 <footer class="bg-primary text-white pt-5 pb-4 px-2">
     <div class="container text-start">
         <div class="row g-4 justify-content-between">
-
-            <div class="col-12 col-md-4 col-lg-4">
+ 
+            <div class="col-12 col-md-5 col-lg-5">
                 <div class="d-flex align-items-center mb-3">
                     <img src="{{ asset('assets/img/logoskawhite.png') }}" alt="Logo PT SKA" class="me-2"
                         style="height: 40px; object-fit: contain;">
                     <span class="fs-4 fw-bold text-white">PT SKA</span>
                 </div>
-                <p class="text-white-50 small mb-3" style="line-height: 1.7; max-width: 340px;">
+                <p class="text-white-50 small mb-3" style="line-height: 1.7; max-width: 360px;">
                     Konsultan IT profesional yang membantu bisnis mengembangkan solusi digital yang efisien, aman, dan
                     scalable untuk mendukung pertumbuhan dan transformasi teknologi Anda.
                 </p>
@@ -31,39 +31,46 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-2 col-lg-2">
-                <h6 class="fw-bold text-white mb-3">Informasi Umum</h6>
-                <ul class="list-unstyled text-small">
-                    <li class="mb-2"><a href="/beranda"
-                            class="text-white-50 text-decoration-none hover-white">Beranda</a></li>
-                    <li class="mb-2"><a href="/layanan"
-                            class="text-white-50 text-decoration-none hover-white">Layanan</a></li>
-                    <li class="mb-2"><a href="/artikel"
-                            class="text-white-50 text-decoration-none hover-white">Artikel</a></li>
-                    <li class="mb-2"><a href="/galeri"
-                            class="text-white-50 text-decoration-none hover-white">Galeri</a></li>
-                    <li class="mb-2"><a href="/kontak"
-                            class="text-white-50 text-decoration-none hover-white">Kontak</a></li>
-                </ul>
+            <div class="col-12 col-md-7 col-lg-6 offset-lg-1">
+                <div class="row g-4 justify-content-md-end">
+                    
+                    <div class="col-6 col-md-5 col-lg-5">
+                        <h6 class="fw-bold text-white mb-3">Informasi Umum</h6>
+                        <ul class="list-unstyled text-small mb-0">
+                            <li class="mb-2"><a href="{{ route('guest.beranda') }}"
+                                    class="text-white-50 text-decoration-none hover-white">Beranda</a></li>
+                            <li class="mb-2"><a href="{{ route('guest.layanan') }}"
+                                    class="text-white-50 text-decoration-none hover-white">Layanan</a></li>
+                            <li class="mb-2"><a href="{{ route('guest.artikel') }}"
+                                    class="text-white-50 text-decoration-none hover-white">Artikel</a></li>
+                            <li class="mb-2"><a href="{{ route('guest.galeri') }}"
+                                    class="text-white-50 text-decoration-none hover-white">Galeri</a></li>
+                            <li class="mb-2"><a href="{{ route('guest.kontak') }}"
+                                    class="text-white-50 text-decoration-none hover-white">Kontak</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-6">
+                        <h6 class="fw-bold text-white mb-3">Layanan Kami</h6>
+                        <ul class="list-unstyled text-small mb-0">
+                            @if (isset($footerLayanans) && $footerLayanans->count() > 0)
+                                @foreach ($footerLayanans as $item)
+                                    <li class="mb-2">
+                                        <a href="{{ route('guest.detaillayanan', $item->id) }}"
+                                            class="text-white-50 text-decoration-none hover-white">
+                                            {{ $item->namalayanan }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            @else
+                                <li class="mb-2"><span class="text-white-50">Belum ada layanan</span></li>
+                            @endif
+                        </ul>
+                    </div>
+
+                </div>
             </div>
 
-            <div class="col-12 col-md-3 col-lg-3">
-                <h6 class="fw-bold text-white mb-3">Layanan Kami</h6>
-                <ul class="list-unstyled text-small">
-                    @if (isset($footerLayanans) && $footerLayanans->count() > 0)
-                        @foreach ($footerLayanans as $item)
-                            <li class="mb-2">
-                                <a href="{{ route('guest.detaillayanan', $item->id) }}"
-                                    class="text-white-50 text-decoration-none hover-white">
-                                    {{ $item->namalayanan }}
-                                </a>
-                            </li>
-                        @endforeach
-                    @else
-                        <li class="mb-2"><span class="text-white-50">Belum ada layanan</span></li>
-                    @endif
-                </ul>
-            </div>
         </div>
 
         <div
