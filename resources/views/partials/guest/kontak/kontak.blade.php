@@ -18,7 +18,8 @@
         </p>
 
         <div class="d-flex flex-wrap gap-3 align-items-center">
-            <a href="https://wa.me/628988307081?text=Halo%20Admin%20PT%20Solusi%20Koneksi%20Anda" target="_blank"
+            <a href="https://wa.me/628988307081?text=Halo%20Admin%20PT%20Solusi%20Koneksi%20Anda%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%2Fpengembangan%20sistem%20IT%20untuk%20bisnis%20saya.%20Boleh%20bantu%20infokan%20alur%20dan%20jadwal%20diskusi%20selengkapnya%3F%20Terima%20kasih."
+                target="_blank"
                 class="btn btn-light text-primary fw-semibold px-3 py-2.5 rounded-3 d-inline-flex align-items-center">
                 <span>Konsultasi Sekarang</span>
                 <ion-icon name="logo-whatsapp" class="ms-2 fs-5"></ion-icon>
