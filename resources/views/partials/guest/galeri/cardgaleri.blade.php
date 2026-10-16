@@ -8,7 +8,7 @@
                         class="me-1"></ion-icon>{{ $item->created_at->locale('id')->translatedFormat('d F Y') }}</small>
                 <h5 class="card-title fw-bold">{{ Str::limit($item->judulgaleri, 96) }}</h5>
                 <div class="d-flex flex-column mt-auto">
-                    <a href="{{ route('guest.detailgaleri', $item->id) }}" class="btn btn-primary p-2 fw-semibold">Baca
+                    <a href="{{ route('guest.detailgaleri', $item->id) }}" class="btn btn-primary p-2 fw-semibold">Lihat
                         Selengkapnya</a>
                 </div>
             </div>
