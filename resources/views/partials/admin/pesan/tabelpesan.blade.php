@@ -46,7 +46,7 @@
                     @empty
                         <tr>
                             <td colspan="6" class="text-center py-4 text-secondary">
-                                <ion-icon name="mail-unread" class="mb-2 d-block mx-auto"
+                                <ion-icon name="chatbubbles" class="mb-2 d-block mx-auto"
                                     style="font-size: 36px;"></ion-icon>
                                 <span>Belum ada pesan masuk.</span>
                             </td>
@@ -57,3 +57,6 @@
         </div>
     </div>
 </div>
+
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
