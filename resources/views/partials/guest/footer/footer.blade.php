@@ -1,7 +1,7 @@
 <footer class="bg-primary text-white pt-5 pb-4 px-2">
     <div class="container text-start">
         <div class="row g-4 justify-content-between">
- 
+
             <div class="col-12 col-md-5 col-lg-5">
                 <div class="d-flex align-items-center mb-3">
                     <img src="{{ asset('assets/img/logoskawhite.png') }}" alt="Logo PT SKA" class="me-2"
@@ -23,7 +23,7 @@
                         style="width: 40px; height: 40px; background-color: rgba(255,255,255,0.1); border: none;">
                         <ion-icon name="logo-facebook" class="fs-5"></ion-icon>
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone=628212262442" target="_blank"
+                    <a href="https://wa.me/628988307081" target="_blank"
                         class="btn btn-sm btn-outline-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 p-0"
                         style="width: 40px; height: 40px; background-color: rgba(255,255,255,0.1); border: none;">
                         <ion-icon name="logo-whatsapp" class="fs-5"></ion-icon>
@@ -33,7 +33,7 @@
 
             <div class="col-12 col-md-7 col-lg-6 offset-lg-1">
                 <div class="row g-4 justify-content-md-end">
-                    
+
                     <div class="col-6 col-md-5 col-lg-5">
                         <h6 class="fw-bold text-white mb-3">Informasi Umum</h6>
                         <ul class="list-unstyled text-small mb-0">
