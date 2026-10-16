@@ -16,15 +16,19 @@
 
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid" style="max-width: 850px;">
-                <a href="{{ route('pesan') }}" class="btn btn-outline-secondary mb-4">
-                    &larr; Kembali ke Pesan Masuk
-                </a>
+                <div class="mb-3">
+                    <a href="{{ route('pesan') }}" class="text-decoration-none d-inline-flex align-items-center text-secondary">
+                        <ion-icon name="arrow-back" class="me-1 fs-5"></ion-icon>Kembali
+                    </a>
+                </div>
 
                 <div class="card border-0 rounded-4 shadow-sm p-4 bg-white">
                     <div class="border-bottom pb-3 mb-3">
                         <h4 class="fw-bold mb-1">{{ $pesan->nama_lengkap }}</h4>
                         <p class="text-primary mb-1">{{ $pesan->email }}</p>
-                        <small class="text-secondary">{{ $pesan->created_at->locale('id')->translatedFormat('l, d F Y - H:i') }} WIB</small>
+                        <small
+                            class="text-secondary">{{ $pesan->created_at->locale('id')->translatedFormat('l, d F Y - H:i') }}
+                            WIB</small>
                     </div>
 
                     <div class="mb-4">
