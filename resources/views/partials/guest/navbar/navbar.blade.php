@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top z-3 p-4 px-0 px-lg-5">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top z-3 p-3 px-0 px-lg-5">
     <div class="container-fluid position-relative">
 
         <a href="/beranda" class="navbar-brand d-flex align-items-center text-decoration-none me-0">
