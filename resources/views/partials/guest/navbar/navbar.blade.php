@@ -27,6 +27,10 @@
                         <a href="/galeri"
                             class="nav-link {{ request()->is('galeri*') || request()->is('/') ? 'active' : '' }}">Galeri</a>
                     </li>
+                    <li class="nav-item-active me-lg-4">
+                        <a href="/kontak"
+                            class="nav-link {{ request()->is('kontak*') || request()->is('/') ? 'active' : '' }}">Kontak</a>
+                    </li>
                 </ul>
             </div>
         </div>

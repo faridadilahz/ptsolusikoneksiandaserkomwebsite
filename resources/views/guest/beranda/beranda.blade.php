@@ -191,18 +191,10 @@
             </div>
         </div>
 
-        <div class="container mt-5 text-center px-4">
-            <img src="{{ asset('assets/img/dottedmap.png') }}" class="img-fluid mb-4"
-                style="max-width: 1080px; width: 100%; height: auto; object-fit: cover; 
-                -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
-                mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
-        </div>
-
         <div class="px-3 px-md-4 py-5">
             <div class="container">
                 <div class="row g-4 align-items-center justify-content-center">
 
-                    <!-- Bagian Teks & Kontak -->
                     <div class="col-12 col-lg-6 text-center text-lg-start">
                         <h2 class="fw-bolder mb-2">Kami Siap Membantu</h2>
                         <p class="text-secondary mb-4 mx-auto mx-lg-0" style="max-width: 500px;">
@@ -211,7 +203,6 @@
                         </p>
 
                         <div class="d-flex flex-column gap-3 align-items-center align-items-lg-start">
-                            <!-- Email -->
                             <div class="d-flex gap-2 align-items-center">
                                 <span
                                     class="badge bg-primary-subtle text-primary rounded-circle p-2 d-inline-flex align-items-center justify-content-center flex-shrink-0">
@@ -220,7 +211,6 @@
                                 <span class="text-primary text-start text-break">ptsolusikoneksianda@gmail.com</span>
                             </div>
 
-                            <!-- Telepon -->
                             <div class="d-flex gap-2 align-items-center">
                                 <span
                                     class="badge bg-primary-subtle text-primary rounded-circle p-2 d-inline-flex align-items-center justify-content-center flex-shrink-0">
@@ -231,7 +221,6 @@
                         </div>
                     </div>
 
-                    <!-- Form Kontak -->
                     <div class="col-12 col-lg-6">
                         @include('partials.guest.kontak.formkontak')
                     </div>
@@ -289,6 +278,13 @@
             </div>
         </div>
 
+        <div class="container mt-5 text-center px-4">
+            <img src="{{ asset('assets/img/dottedmap.png') }}" class="img-fluid mb-4"
+                style="max-width: 1080px; width: 100%; height: auto; object-fit: cover; 
+                -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
+                mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
+        </div>
+        
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
             <div class="container">
                 <div class="row g-4 justify-content-center">

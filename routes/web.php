@@ -25,6 +25,9 @@ Route::get('/artikel/{id}', [BerandasController::class, 'showArtikel'])->name('g
 Route::get('/galeri', [BerandasController::class, 'galeri']);
 Route::get('/galeri/{id}', [BerandasController::class, 'showGaleri'])->name('guest.detailgaleri');
 
+Route::get('/kontak', function () {
+    return view('guest.kontak.kontak');
+})->name('kontak');
 Route::post('/kontak/kirim', [BerandasController::class, 'kirimKontak'])->name('kontak.kirim');
 
 Route::get('/login', function () {
