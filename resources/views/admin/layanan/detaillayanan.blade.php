@@ -24,24 +24,23 @@
 
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="mx-auto" style="max-width: 850px">
+
+                @if (session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
                 
-                <!-- Header Baris Atas (Tombol Kembali di Kiri, Edit & Hapus di Kanan) -->
                 <div class="d-flex justify-content-between align-items-center w-100 mb-4">
-                    <!-- Tombol Kembali (Kiri) -->
                     <a href="/admin/layanan"
                         class="text-decoration-none d-inline-flex align-items-center text-secondary">
                         <ion-icon name="arrow-back" class="me-1 fs-5"></ion-icon>Kembali
                     </a>
 
-                    <!-- Group Tombol Aksi (Kanan) -->
                     <div class="d-flex align-items-center gap-2">
-                        <!-- Tombol Edit -->
                         <a href="{{ route('layanan.edit', ['id' => $layanans->id, 'from' => 'detail']) }}" 
                            class="btn btn-primary d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
                             <ion-icon name="create" class="me-1 fs-5"></ion-icon>Edit Layanan
                         </a>
 
-                        <!-- Tombol Hapus -->
                         <form action="{{ route('layanan.destroy', $layanans->id) }}" method="POST" class="d-inline"
                             onsubmit="return confirm('Apakah Anda yakin ingin menghapus layanan ini?')">
                             @csrf
@@ -53,7 +52,6 @@
                     </div>
                 </div>
 
-                <!-- Konten Detail Layanan -->
                 <div class="d-flex text-start flex-column justify-content-start align-items-start">
                     <div>
                         <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
