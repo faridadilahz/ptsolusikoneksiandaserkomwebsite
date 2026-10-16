@@ -24,38 +24,62 @@
 
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="mx-auto" style="max-width: 850px">
-                <div class="mb-4 text-start">
+                
+                <!-- Header Baris Atas (Tombol Kembali di Kiri, Edit & Hapus di Kanan) -->
+                <div class="d-flex justify-content-between align-items-center w-100 mb-4">
+                    <!-- Tombol Kembali (Kiri) -->
                     <a href="/admin/layanan"
-                        class="text-decoration-none d-inline-flex align-items-center text-secondary mb-2"><ion-icon
-                            name="arrow-back" class="me-1"></ion-icon>Kembali</a>
+                        class="text-decoration-none d-inline-flex align-items-center text-secondary">
+                        <ion-icon name="arrow-back" class="me-1 fs-5"></ion-icon>Kembali
+                    </a>
+
+                    <!-- Group Tombol Aksi (Kanan) -->
+                    <div class="d-flex align-items-center gap-2">
+                        <!-- Tombol Edit -->
+                        <a href="{{ route('layanan.edit', ['id' => $layanans->id, 'from' => 'detail']) }}" 
+                           class="btn btn-primary d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
+                            <ion-icon name="create" class="me-1 fs-5"></ion-icon>Edit Layanan
+                        </a>
+
+                        <!-- Tombol Hapus -->
+                        <form action="{{ route('layanan.destroy', $layanans->id) }}" method="POST" class="d-inline"
+                            onsubmit="return confirm('Apakah Anda yakin ingin menghapus layanan ini?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-outline-danger d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
+                                <ion-icon name="trash" class="me-1 fs-5"></ion-icon>Hapus Layanan
+                            </button>
+                        </form>
+                    </div>
                 </div>
+
+                <!-- Konten Detail Layanan -->
                 <div class="d-flex text-start flex-column justify-content-start align-items-start">
                     <div>
                         <span class="badge fs-6 bg-primary-subtle text-primary rounded-2 p-3 mb-3">
                             <ion-icon size="large" name="pricetag"></ion-icon>
                         </span>
                     </div>
-                    <h2 class="fw-bold mb-1" style="max-width: 850px;">{{ $layanans->namalayanan }}</h2>
-                    <img src="{{ asset('storage/' . $layanans->gambarlayanan) }}" alt=""
-                        class="rounded-3 mb-3 img-fluid" style="max-width: 850px; width: 100%; height: auto">
+                    <h2 class="fw-bold mb-2" style="max-width: 850px;">{{ $layanans->namalayanan }}</h2>
                     <p class="text-secondary mb-3" style="max-width: 850px;">{{ $layanans->deskripsilayanan }}</p>
-                    <p class="text-secondary d-inline-flex align-items-center"><ion-icon name="calendar"
-                            class="me-2"></ion-icon>{{ $layanans->created_at->locale('id')->translatedFormat('d F Y') }}
+                    <p class="text-secondary d-inline-flex align-items-center mb-0">
+                        <ion-icon name="calendar" class="me-2"></ion-icon>{{ $layanans->created_at->locale('id')->translatedFormat('d F Y') }}
                     </p>
                 </div>
+
             </div>
         </div>
     </main>
     <footer>
         <!-- place footer here -->
     </footer>
-    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+
+    <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
-
-<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>

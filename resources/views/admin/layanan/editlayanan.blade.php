@@ -28,6 +28,8 @@
                     @csrf
                     @method('PUT')
 
+                    <input type="hidden" name="redirect_to" value="{{ $from ?? 'index' }}">
+
                     <div class="mb-4">
                         <label for="namalayanan" class="form-label text-dark fw-normal mb-2">Nama Layanan</label>
                         <div class="position-relative">

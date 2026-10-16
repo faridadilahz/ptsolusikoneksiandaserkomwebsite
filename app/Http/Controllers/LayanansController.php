@@ -44,10 +44,11 @@ class LayanansController extends Controller
         return view('admin.layanan.detaillayanan', compact('layanans'));
     }
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         $layanans = Layanans::findOrFail($id);
-        return view('admin.layanan.editlayanan', compact('layanans'));
+        $from = $request->query('from');
+        return view('admin.layanan.editlayanan', compact('layanans', 'from'));
     }
 
     public function update(Request $request, $id)
@@ -62,6 +63,10 @@ class LayanansController extends Controller
         $layanans->namalayanan = $request->namalayanan;
         $layanans->deskripsilayanan = $request->deskripsilayanan;
         $layanans->save();
+
+        if ($request->redirect_to === 'detail') {
+            return redirect()->route('layanan.show', $id)->with('success', 'Layanan berhasil diperbarui!');
+        }
 
         return redirect()->route('layanan')->with('success', 'Layanan berhasil diperbarui!');
     }
