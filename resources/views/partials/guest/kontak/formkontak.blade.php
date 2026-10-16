@@ -1,4 +1,4 @@
-<div class="card border-0 rounded-4 p-4 p-lg-4 bg-white w-100 shadow-sm">
+<div class="card border-0 rounded-4 p-4 p-lg-4 bg-white w-100 shadow-sm mx-auto">
 
     @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show mb-4 border-0 shadow-sm" role="alert">
