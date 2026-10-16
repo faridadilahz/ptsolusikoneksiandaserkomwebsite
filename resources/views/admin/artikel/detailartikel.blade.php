@@ -26,7 +26,7 @@
             <div class="mx-auto" style="max-width: 850px">
                <div class="d-flex justify-content-between align-items-center w-100 mb-4">
                     <!-- Tombol Kembali (Kiri) -->
-                    <a href="/admin/layanan"
+                    <a href="/admin/artikel"
                         class="text-decoration-none d-inline-flex align-items-center text-secondary">
                         <ion-icon name="arrow-back" class="me-1 fs-5"></ion-icon>Kembali
                     </a>

@@ -6,6 +6,8 @@ use App\Models\Artikels;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
+use function Laravel\Prompts\search;
+
 class ArtikelsController extends Controller
 {
     /**
@@ -67,10 +69,11 @@ class ArtikelsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         $artikels = Artikels::findOrFail($id);
-        return view('admin.artikel.editartikel', compact('artikels'));
+        $from = $request->query('from');
+        return view('admin.artikel.editartikel', compact('artikels', 'from'));
     }
 
     /**
@@ -97,6 +100,10 @@ class ArtikelsController extends Controller
         $artikels->deskripsiartikel = $request->deskripsiartikel;
         $artikels->save();
 
+        if ($request->redirect_to === 'detail') {
+            return redirect()->route('artikel.show', $id)->with('success', 'Artikel berhasil diperbarui!');
+        }
+        
         return redirect()->route('artikel')->with('success', 'Artikel berhasil diperbarui!');
     }
 
