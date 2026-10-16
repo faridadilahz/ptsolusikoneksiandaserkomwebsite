@@ -1,8 +1,4 @@
-<div class="card border-0 rounded-4 p-4 p-lg-4 bg-white mx-auto" style="max-width: 720px;">
-    <div class="mb-4 text-center">
-        <h3 class="fw-bold text-dark mb-2">Punya Pertanyaan? Hubungi Kami</h3>
-        <p class="text-secondary mb-0">Hubungi tim PT Solusi Koneksi Anda langsung melalui formulir di bawah ini.</p>
-    </div>
+<div class="card border-0 rounded-4 p-4 p-lg-4 bg-white w-100 shadow-sm">
 
     @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show mb-4 border-0 shadow-sm" role="alert">
@@ -31,21 +27,21 @@
         <div class="mb-3 text-start">
             <label for="nama_lengkap" class="form-label text-dark fw-semibold">Nama Lengkap</label>
             <input type="text" name="nama_lengkap" id="nama_lengkap" 
-                class="form-control rounded-3 py-3 px-3 border-light-subtle"
+                class="form-control rounded-3 py-2 px-3 border-light-subtle"
                 placeholder="Masukkan nama lengkap Anda" value="{{ old('nama_lengkap') }}" required>
         </div>
 
         <div class="mb-3 text-start">
             <label for="email" class="form-label text-dark fw-semibold">Alamat Email</label>
             <input type="email" name="email" id="email" 
-                class="form-control rounded-3 py-3 px-3 border-light-subtle"
+                class="form-control rounded-3 py-2 px-3 border-light-subtle"
                 placeholder="contoh@gmail.com" value="{{ old('email') }}" required>
         </div>
 
         <div class="mb-4 text-start">
             <label for="pesan" class="form-label text-dark fw-semibold">Pesan</label>
             <textarea name="pesan" id="pesan" rows="4" 
-                class="form-control rounded-3 py-3 px-3 border-light-subtle"
+                class="form-control rounded-3 py-2 px-3 border-light-subtle"
                 placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required>{{ old('pesan') }}</textarea>
         </div>
 

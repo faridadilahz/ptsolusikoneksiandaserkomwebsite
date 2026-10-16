@@ -198,14 +198,50 @@
                 mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
         </div>
 
-        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
+        <div class="px-3 px-md-4 py-5">
             <div class="container">
-                <div class="row g-4 justify-content-center">
-                    @include('partials.guest.kontak.formkontak')
+                <div class="row g-4 align-items-center justify-content-center">
+
+                    <div class="col-12 col-lg-6 text-center text-lg-start">
+                        <h2 class="fw-bolder mb-2">Kami Siap Membantu</h2>
+                        <p class="text-secondary mb-3 mx-auto mx-lg-0" style="max-width: 500px;">
+                            Ceritakan sedikit tentang kebutuhan atau kendala yang sedang Anda hadapi melalui formulir di
+                            bawah ini. Kami akan menganalisisnya dan kembali dengan solusi terbaik untuk Anda.
+                        </p>
+
+                        <div class="d-flex flex-column gap-2">
+                            <div class="d-flex gap-2">
+                                <span
+                                    class="badge bg-primary-subtle text-primary rounded-pill p-2 d-inline-flex align-items-center">
+                                    <ion-icon name="mail"></ion-icon>
+                                </span>
+                                <span class="text-primary">ptsolusikoneksianda@gmail.com</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <span
+                                    class="badge bg-primary-subtle text-primary rounded-pill p-2 d-inline-flex align-items-center">
+                                    <ion-icon name="call"></ion-icon>
+                                </span>
+                                <span class="text-primary">(+62) 898 8307 081</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <span
+                                    class="badge bg-primary-subtle text-primary rounded-pill p-2 d-inline-flex align-items-center">
+                                    <ion-icon name="time"></ion-icon>
+                                </span>
+                                <span class="text-primary">Senin sampai Jumat, 09.00 - 17.00 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        @include('partials.guest.kontak.formkontak')
+                    </div>
+
                 </div>
             </div>
         </div>
-        
+
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
             <div class="container">
                 <div class="row g-4 justify-content-center">
