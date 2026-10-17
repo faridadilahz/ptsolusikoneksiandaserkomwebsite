@@ -1,6 +1,6 @@
 <div class="card border-0 rounded-4 shadow-sm">
     <div class="card-body p-0">
-        <div class="table-responsive">
+        <div class="table-responsive rounded-3">
             <table class="table table-hover align-middle mb-0">
                 <thead class="table-light">
                     <tr class="text-center">
