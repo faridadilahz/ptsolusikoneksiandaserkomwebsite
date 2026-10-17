@@ -23,7 +23,6 @@
         @include('partials.admin.sidebar.sidebar')
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid">
-
                 @if ($errors->any())
                     <div class="alert alert-danger alert-dismissible fade show mb-4 border-0 shadow-sm" role="alert">
                         <ul class="mb-0">
@@ -35,6 +34,9 @@
                     </div>
                 @endif
 
+                <div class="mb-3">
+                    <h3 class="fw-bold">Edit Profil</h3>
+                </div>
                 <form action="{{ route('admin.updateprofil') }}" method="POST">
                     @csrf
                     @method('PUT')
