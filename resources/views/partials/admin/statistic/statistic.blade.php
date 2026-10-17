@@ -4,7 +4,7 @@
 
 <div class="row g-4">
     <div class="col-md-3 col-sm-6">
-        <div class="card card-light h-100 border-0">
+        <div class="card card-light h-100 border-0 shadow-sm">
             <div class="card-body">
                 <div class="badge bg-primary-subtle text-primary p-2 mb-3"><ion-icon name="pricetag" class="fs-5"></ion-icon></div>
                 <h1 class="card-title text-primary fw-bolder">{{ $totalLayanan }}</h1>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="col-md-3 col-sm-6">
-        <div class="card card-light h-100 border-0">
+        <div class="card card-light h-100 border-0 shadow-sm">
             <div class="card-body">
                 <div class="badge bg-primary-subtle text-primary p-2 mb-3"><ion-icon name="newspaper" class="fs-5"></ion-icon></div>
                 <h1 class="card-title text-primary fw-bolder">{{ $totalArtikel }}</h1>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="col-md-3 col-sm-6">
-        <div class="card card-light h-100 border-0">
+        <div class="card card-light h-100 border-0 shadow-sm">
             <div class="card-body">
                 <div class="badge bg-primary-subtle text-primary p-2 mb-3"><ion-icon name="images" class="fs-5"></ion-icon></div>
                 <h1 class="card-title text-primary fw-bolder">{{ $totalGaleri }}</h1>
@@ -34,7 +34,7 @@
     </div>
 
     <div class="col-md-3 col-sm-6">
-        <div class="card card-light h-100 border-0">
+        <div class="card card-light h-100 border-0 shadow-sm">
             <div class="card-body">
                 <div class="badge bg-primary-subtle text-primary p-2 mb-3"><ion-icon name="pricetag" class="fs-5"></ion-icon></div>
                 <h1 class="card-title text-primary fw-bolder">{{ $totalPesan }}</h1>
