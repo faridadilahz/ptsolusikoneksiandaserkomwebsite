@@ -1,4 +1,4 @@
-<header class="d-none d-lg-flex justify-content-between rounded-3 align-items-center bg-white p-3 mb-4">
+<header class="d-flex justify-content-between rounded-3 align-items-center bg-white p-3 mb-4 shadow-sm">
 
     <div class="topbar-left">
         <h4 class="fw-bold">Dasbor PT Solusi Koneksi Anda</h4>
