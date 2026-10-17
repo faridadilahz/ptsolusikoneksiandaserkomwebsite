@@ -3,7 +3,7 @@
 </head>
 
 <header
-    class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center bg-white p-3 mb-4 rounded-3 gap-3">
+    class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center bg-white p-3 mb-4 rounded-3 gap-3 shadow-sm">
 
     <div class="topbar-left">
         <h4 class="fw-bold mb-1">Kelola Layanan</h4>
