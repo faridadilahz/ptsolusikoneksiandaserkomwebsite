@@ -41,23 +41,20 @@
             </div>
         </div>
 
-        <div class="d-flex text-center justify-content-center align-items-center px-3 py-5">
-            <div class="container py-5">
+        <div class="d-flex flex-column text-center justify-content-center align-items-center px-3 pt-5 pb-5">
+            <div class="container mb-2">
                 <img src="{{ asset('assets/img/herobanner.jpg') }}" class="img-fluid rounded-3 mb-4"
-                    style="aspect-ratio: 16 / 6; max-width: 1080px width: 100%; height: auto; object-fit: cover;">
+                    style="aspect-ratio: 16 / 6; max-width: 720px; width: 100%; height: auto; object-fit: cover;">
                 <h1 class="fw-bolder mb-2 text-black">Mempercepat Pertumbuhan Bisnis dengan Teknologi Terkini!</h1>
                 <p class="text-secondary">PT Solusi Koneksi Anda didirikan dengan visi untuk
                     menjadi penyedia solusi teknologi terdepan di industri IT. Berawal dari layanan pengembangan
                     perangkat lunak dan website kustom, kami tumbuh menjadi perusahaan teknologi yang menawarkan solusi
                     digital lengkap, mulai dari konsultasi IT, pengembangan aplikasi mobile, keamanan sistem, hingga
                     digital marketing.</p>
+            </div>
 
-                <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
-                    <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill">50+ Proyek</span>
-                    <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill">5 Tahun Berpengalaman</span>
-                    <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill">Tim IT Ahli</span>
-                    <span class="badge fs-6 bg-primary-subtle text-primary rounded-pill">100+ Client</span>
-                </div>
+            <div class="w-100">
+                @include('partials.guest.statistic.statistic')
             </div>
         </div>
 
@@ -65,7 +62,6 @@
             <h2 class="fw-bold mb-3">Mengapa PT Solusi Koneksi Anda?</h2>
             <div class="container my-4">
                 <div class="row g-4 justify-content-center">
-                    <!-- Card 1 -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
@@ -80,7 +76,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
@@ -94,7 +89,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
@@ -109,7 +103,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card h-100 rounded-3 border-0 py-3 px-3 shadow-sm">
                             <div>
@@ -284,7 +277,7 @@
                 -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
                 mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
         </div>
-        
+
         <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
             <div class="container">
                 <div class="row g-4 justify-content-center">
