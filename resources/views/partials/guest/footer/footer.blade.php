@@ -12,7 +12,7 @@
                     Konsultan IT profesional yang membantu bisnis mengembangkan solusi digital yang efisien, aman, dan
                     scalable untuk mendukung pertumbuhan dan transformasi teknologi Anda.
                 </p>
-                <div class="d-flex gap-3">
+                <div class="d-flex gap-3 mb-2">
                     <a href="https://www.instagram.com/smkn4kotabogor/" target="_blank"
                         class="btn btn-sm btn-outline-light rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 p-0"
                         style="width: 40px; height: 40px; background-color: rgba(255,255,255,0.1); border: none;">
