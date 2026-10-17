@@ -20,8 +20,8 @@
         @include('partials.guest.navbar.navbar')
     </header>
     <main class="mt-5 pt-6" style="background-color: #f5f5f5;">
-        <div class="px-3 px-md-4 py-5">
-            <div class="container">
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-3 py-5">
+            <div class="container pt-3">
                 <div class="row g-4 align-items-center justify-content-center">
 
                     <div class="col-12 col-lg-6 text-center text-lg-start">
