@@ -5,26 +5,31 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $user = Auth::user();
 
         return view('admin.profil.profil', compact('user'));
     }
 
-    public function kelolakatasandi() {
+    public function kelolakatasandi()
+    {
         $user = Auth::user();
 
         return view('admin.profil.kelolakatasandi', compact('user'));
     }
 
-    public function ubahkatasandi() {
+    public function ubahkatasandi()
+    {
         return view('admin.profil.ubahkatasandi');
     }
 
-    public function updatekatasandi(Request $request) {
+    public function updatekatasandi(Request $request)
+    {
         /** @var \App\Models\User $user */
         $user = Auth::user();
 
@@ -38,7 +43,7 @@ class ProfileController extends Controller
             'password.confirmed' => 'Konfirmasi kata sandi tidak cocok.',
         ]);
 
-        if(!Hash::check($request->current_password, $user->password)) {
+        if (!Hash::check($request->current_password, $user->password)) {
             return back()->withErrors(['current_password' => 'Kata sandi saat ini salah!']);
         }
 
@@ -48,29 +53,52 @@ class ProfileController extends Controller
         return redirect()->route('admin.kelolakatasandi')->with('success', 'Kata sandi berhasil diperbarui!');
     }
 
-    public function ubahprofil() {
+    public function ubahprofil()
+    {
         $user = Auth::user();
         return view('admin.profil.ubahprofil', compact('user'));
     }
 
-    public function editprofil(Request $request) {
-    /** @var \App\Models\User $user */    
-    $user = Auth::user();
+    public function editprofil(Request $request)
+    {
+        /** @var \App\Models\User $user */
+        $user = Auth::user();
 
-    $request -> validate([
-        'name' => ['required', 'string', 'max:255'],
-        'email' => ['required', 'string', 'max:255', 'unique:users,email,' . $user->id],
-    ], [
-        'name.required' => 'Username wajib diisi.',
+        // 1. Validasi teks utama
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'max:255', 'unique:users,email,' . $user->id],
+        ], [
+            'name.required' => 'Username wajib diisi.',
             'email.required' => 'Email wajib diisi.',
             'email.email' => 'Format email tidak valid.',
             'email.unique' => 'Email sudah digunakan.',
-    ]);
+        ]);
 
-    $user->name = $request->name;
-    $user->email = $request->email;
-    $user->save();
+        // 2. Validasi file HANYA JIKA ada file yang di-upload
+        if ($request->hasFile('fotoprofil')) {
+            $request->validate([
+                'fotoprofil' => ['image', 'mimes:jpeg,png,jpg,gif,webp', 'max:2048'],
+            ], [
+                'fotoprofil.image' => 'File harus berupa gambar.',
+                'fotoprofil.mimes' => 'Format foto profil harus jpeg, png, jpg, gif, atau webp.',
+                'fotoprofil.max' => 'Ukuran foto profil maksimal 2MB.',
+            ]);
 
-    return redirect()->route('profil')->with('success', 'Profil berhasil diperbarui!');
+            // Hapus foto lama jika ada di storage (bukan file default assets)
+            if ($user->fotoprofil && Storage::disk('public')->exists($user->fotoprofil)) {
+                Storage::disk('public')->delete($user->fotoprofil);
+            }
+
+            // Simpan foto baru ke storage/app/public/fotoprofil
+            $fotoPath = $request->file('fotoprofil')->store('fotoprofil', 'public');
+            $user->fotoprofil = $fotoPath;
+        }
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect()->route('profil')->with('success', 'Profil berhasil diperbarui!');
     }
 }

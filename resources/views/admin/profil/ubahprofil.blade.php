@@ -37,9 +37,28 @@
                 <div class="mb-3">
                     <h3 class="fw-bold">Edit Profil</h3>
                 </div>
-                <form action="{{ route('admin.updateprofil') }}" method="POST">
+                <form action="{{ route('admin.updateprofil') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
+
+                    @if ($user->fotoprofil)
+                        <div class="mb-2">
+                            <img src="{{ asset('storage/' . $user->fotoprofil) }}" class="rounded-circle"
+                                style="width: 120px; height: 120px; object-fit: cover;">
+                        </div>
+                    @else
+                        <div class="mb-2">
+                            <img src="{{ asset('assets/img/logoskablue.png') }}" class="rounded-circle"
+                                style="width: 120px; height: 120px; object-fit: cover;">
+                        </div>
+                    @endif
+
+                    <!-- Input File Foto Profil -->
+                    <div class="mb-4">
+                        <label for="fotoprofil" class="form-label text-dark fw-semibold">Foto Profil</label>
+                        <input type="file" name="fotoprofil" id="fotoprofil" class="form-control" accept="image/*">
+                        <small class="text-secondary">Abaikan jika tidak ingin mengubah foto profil.</small>
+                    </div>
 
                     <div class="mb-4">
                         <label for="name" class="form-label text-dark fw-normal mb-2">Username</label>

@@ -33,8 +33,14 @@
                         <div class="card border-0 rounded-3 shadow-sm h-100">
                             <div
                                 class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
-                                <img src="{{ asset('assets/img/logoskablue.png') }}" class="rounded-3 mb-3"
-                                    style="max-width: 140px;">
+                                @if ($user->fotoprofil && \Illuminate\Support\Facades\Storage::disk('public')->exists($user->fotoprofil))
+                                    <img src="{{ asset('storage/' . $user->fotoprofil) }}" class="rounded-circle mb-3"
+                                        style="width: 140px; height: 140px; object-fit: cover;">
+                                @else
+                                    <img src="{{ asset($user->fotoprofil ?? 'assets/img/logoskablue.png') }}"
+                                        class="rounded-circle mb-3"
+                                        style="width: 140px; height: 140px; object-fit: cover;">
+                                @endif
                                 <h4 class="card-title fw-bold mb-1">{{ $user->name ?? 'Admin PT Solusi Koneksi Anda' }}
                                 </h4>
                                 <p class="text-secondary mb-2">{{ $user->email ?? 'adminptska@gmail.com' }}</p>
