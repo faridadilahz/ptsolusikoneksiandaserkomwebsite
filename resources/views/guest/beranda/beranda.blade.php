@@ -33,7 +33,7 @@
                     Indonesia.</p>
 
                 <div class="d-flex flex-column flex-sm-row gap-2">
-                    <a href="https://wa.me/628988307081?text=Halo%20Admin%20PT%20Solusi%20Koneksi%20Anda%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%2Fpengembangan%20sistem%20IT%20untuk%20bisnis%20saya.%20Boleh%20bantu%20infokan%20alur%20dan%20jadwal%20diskusi%20selengkapnya%3F%20Terima%20kasih."
+                    <a href="https://wa.me/628988307081?text=Halo%20Admin%20PT%20Solusi%20Koneksi%20Anda%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%2Fpengembangan%20sistem%20IT%20untuk%20bisnis%20saya.%20Boleh%20bantu%20infokan%20alur%20dan%20jadwal%20diskusi%20selengkapnya%3F%20Terima%20kasih." target="_blank"
                         class="btn btn-light fw-semibold text-primary d-inline-flex align-items-center justify-content-center gap-1 px-3 py-2">
                         <span>Konsultasi Sekarang</span>
                         <ion-icon name="arrow-forward"></ion-icon>

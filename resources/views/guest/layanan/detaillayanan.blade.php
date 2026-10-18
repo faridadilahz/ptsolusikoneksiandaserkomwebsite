@@ -40,9 +40,25 @@
             </div>
         </div>
         </div>
+
+        <div class="container mt-5 text-center px-4">
+            <img src="{{ asset('assets/img/dottedmap.png') }}" class="img-fluid mb-4"
+                style="max-width: 1080px; width: 100%; height: auto; object-fit: cover; 
+                -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
+                mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
+        </div>
+
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    @include('partials.guest.kontak.kontak')
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer>
-        <!-- place footer here -->
+        @include('partials.guest.footer.footer')
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
