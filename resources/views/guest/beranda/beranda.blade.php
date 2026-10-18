@@ -41,7 +41,6 @@
                     <a href="{{ route('guest.layanan') }}"
                         class="btn btn-outline-light fw-semibold text-light d-inline-flex align-items-center justify-content-center gap-1 px-3 py-2">
                         <span>Lihat Layanan</span>
-                        <ion-icon name="arrow-forward"></ion-icon>
                     </a>
                 </div>
             </div>
