@@ -38,9 +38,10 @@
                     </div>
 
                     <div class="d-flex flex-column flex-sm-row gap-2">
-                        <a href="mailto:{{ $pesan->email }}"
-                            class="btn btn-primary fw-semibold d-inline-flex align-items-center justify-content-center">
-                            Balas via Email
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ $pesan->email }}&su={{ urlencode('Tanggapan Pesan dari PT Solusi Koneksi Anda') }}&body={{ urlencode('Halo ' . $pesan->nama_lengkap . ",\n\nTerima kasih telah menghubungi PT Solusi Koneksi Anda.\n\nMenanggapi pesan Anda mengenai:\n\"" . $pesan->pesan . "\"\n\nBerikut informasi yang dapat kami sampaikan:\n\n\n\nSalam hangat,\nAdmin PT Solusi Koneksi Anda") }}"
+                            target="_blank"
+                            class="btn btn-primary fw-semibold d-inline-flex align-items-center justify-content-center">Balas
+                            via Gmail
                         </a>
 
                         <form action="{{ route('pesan.destroy', $pesan->id) }}" method="POST" class="mb-0 d-flex"
