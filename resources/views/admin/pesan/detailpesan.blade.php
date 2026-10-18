@@ -37,11 +37,16 @@
                         <p class="text-secondary" style="white-space: pre-line;">{{ $pesan->pesan }}</p>
                     </div>
 
+                    @php
+                        $subject = 'Tanggapan Pesan dari PT Solusi Koneksi Anda';
+                        $body = "Halo {$pesan->nama_lengkap},\n\nTerima kasih telah menghubungi PT Solusi Koneksi Anda.\n\nMenanggapi pesan Anda mengenai:\n\"{$pesan->pesan}\"\n\nBerikut informasi yang dapat kami sampaikan:\n\n\n\nSalam hangat,\nAdmin PT Solusi Koneksi Anda";
+                    @endphp
+
                     <div class="d-flex flex-column flex-sm-row gap-2">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ $pesan->email }}&su={{ urlencode('Tanggapan Pesan dari PT Solusi Koneksi Anda') }}&body={{ urlencode('Halo ' . $pesan->nama_lengkap . ",\n\nTerima kasih telah menghubungi PT Solusi Koneksi Anda.\n\nMenanggapi pesan Anda mengenai:\n\"" . $pesan->pesan . "\"\n\nBerikut informasi yang dapat kami sampaikan:\n\n\n\nSalam hangat,\nAdmin PT Solusi Koneksi Anda") }}"
-                            target="_blank"
-                            class="btn btn-primary fw-semibold d-inline-flex align-items-center justify-content-center">Balas
-                            via Gmail
+                        <a href="mailto:{{ $pesan->email }}?subject={{ rawurlencode($subject) }}&body={{ rawurlencode($body) }}"
+                            onclick="handleBalasEmail(event, '{{ $pesan->email }}', '{{ addslashes(rawurlencode($subject)) }}', '{{ addslashes(rawurlencode($body)) }}')"
+                            class="btn btn-primary fw-semibold d-inline-flex align-items-center justify-content-center">
+                            Balas via Email
                         </a>
 
                         <form action="{{ route('pesan.destroy', $pesan->id) }}" method="POST" class="mb-0 d-flex"
@@ -59,6 +64,18 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleBalasEmail(event, email, subject, body) {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+            if (!isMobile) {
+                event.preventDefault();
+                const gmailWebUrl =
+                    `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${subject}&body=${body}`;
+                window.open(gmailWebUrl, '_blank');
+            }
+        }
+    </script>
 </body>
 
 </html>
