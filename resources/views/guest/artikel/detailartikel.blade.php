@@ -24,10 +24,12 @@
     </header>
     <main class="mt-5 pt-6" style="background-color: #f5f5f5;">
         <div class="d-flex text-center flex-column justify-content-center align-items-center px-5 py-5">
-            <p class="text-secondary mb-4"><i class="fa-regular fa-calendar me-2"></i>{{ $artikels->created_at->locale('id')->translatedFormat('d F Y') }}</p>
+            <p class="text-secondary mb-4"><i
+                    class="fa-regular fa-calendar me-2"></i>{{ $artikels->created_at->locale('id')->translatedFormat('d F Y') }}
+            </p>
             <h2 class="fw-bold mb-4">{{ $artikels->judulartikel }}</h2>
-            <img src="{{ asset('storage/' . $artikels->gambarartikel) }}" alt="" class="img-fluid w-100 rounded-3 mb-3"
-                style="max-width: 850px;">
+            <img src="{{ asset('storage/' . $artikels->gambarartikel) }}" alt=""
+                class="img-fluid w-100 rounded-3 mb-3" style="max-width: 850px;">
             <p class="text-secondary" style="max-width: 850px;">{{ $artikels->deskripsiartikel }}</p>
             <div>
                 <button onclick="history.back()" class="btn btn-outline-primary px-4 py-2 rounded-3">
@@ -36,9 +38,25 @@
             </div>
         </div>
         </div>
+
+        <div class="container mt-5 text-center px-4">
+            <img src="{{ asset('assets/img/dottedmap.png') }}" class="img-fluid mb-4"
+                style="max-width: 1080px; width: 100%; height: auto; object-fit: cover; 
+                -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); 
+                mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);">
+        </div>
+
+        <div class="d-flex text-center flex-wrap justify-content-center align-items-center px-4 py-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    @include('partials.guest.kontak.kontak')
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer>
-        <!-- place footer here -->
+        @include('partials.guest.footer.footer')
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
