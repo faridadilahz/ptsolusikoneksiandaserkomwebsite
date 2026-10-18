@@ -11,8 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-        <link rel="icon" type="image/png" href="{{ asset('assets/img/logoskablue.png') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logoskablue.png') }}">
 </head>
 
 <body>
@@ -23,14 +23,17 @@
         @include('partials.admin.sidebar.sidebar')
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid">
-
-                <form action="{{ route('artikel.update', $artikels->id) }}" method="POST" enctype="multipart/form-data">
+                
+                <h4 class="fw-bold mb-4">Edit Artikel</h4>
+                
+                <form action="{{ route('artikel.update', $artikels->id) }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
                     <input type="hidden" name="redirect_to" value="{{ $from ?? 'index' }}">
 
-                    <h4 class="fw-bold mb-4">Edit Artikel</h4>
+
 
                     @if ($artikels->gambarartikel)
                         <div class="mb-2">
@@ -66,7 +69,8 @@
 
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
-                        <a href="{{ route('artikel') }}" onclick="history.back(); return false;" class="btn btn-outline-primary">Batal</a>
+                        <a href="{{ route('artikel') }}" onclick="history.back(); return false;"
+                            class="btn btn-outline-primary">Batal</a>
                     </div>
 
                 </form>

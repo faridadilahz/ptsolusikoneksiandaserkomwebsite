@@ -24,13 +24,16 @@
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
             <div class="container-fluid">
 
-                <form action="{{ route('layanan.update', $layanans->id) }}" method="POST" enctype="multipart/form-data">
+                <h4 class="fw-bold mb-4">Edit Layanan</h4>
+
+                <form action="{{ route('layanan.update', $layanans->id) }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
                     <input type="hidden" name="redirect_to" value="{{ $from ?? 'index' }}">
 
-                    <h4 class="fw-bold mb-4">Edit Layanan</h4>
+
 
                     <div class="mb-4">
                         <label for="namalayanan" class="form-label text-dark fw-normal mb-2">Nama Layanan</label>
@@ -43,7 +46,8 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="deskripsilayanan" class="form-label text-dark fw-normal mb-2">Deskripsi Layanan</label>
+                        <label for="deskripsilayanan" class="form-label text-dark fw-normal mb-2">Deskripsi
+                            Layanan</label>
                         <div class="position-relative">
                             <textarea name="deskripsilayanan" id="deskripsilayanan" rows="5" class="form-control border-0 rounded-3 py-3 pe-5"
                                 placeholder="Masukkan deskripsi layanan disini" required>{{ old('deskripsilayanan', $layanans->deskripsilayanan) }}</textarea>
@@ -52,7 +56,8 @@
 
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary text-white">Simpan Perubahan</button>
-                        <a href="{{ route('layanan') }}"  onclick="history.back(); return false;" class="btn btn-outline-primary">Batal</a>
+                        <a href="{{ route('layanan') }}" onclick="history.back(); return false;"
+                            class="btn btn-outline-primary">Batal</a>
                     </div>
 
                 </form>

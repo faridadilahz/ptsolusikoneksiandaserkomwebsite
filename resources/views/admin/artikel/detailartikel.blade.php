@@ -47,7 +47,7 @@
                             @method('DELETE')
                             <button type="submit"
                                 class="btn btn-outline-danger d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
-                                <ion-icon name="trash" class="me-1 fs-5"></ion-icon><span class="d-none d-sm-inline">Edit Artikel</span>
+                                <ion-icon name="trash" class="me-1 fs-5"></ion-icon><span class="d-none d-sm-inline">Hapus Artikel</span>
                             </button>
                         </form>
                     </div>
