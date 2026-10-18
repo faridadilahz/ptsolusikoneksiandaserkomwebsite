@@ -15,9 +15,10 @@
         @include('partials.admin.sidebar.sidebar')
 
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
-            <div class="container-fluid" style="max-width: 850px;">
+            <div class="container-fluid">
                 <div class="mb-3">
-                    <a href="{{ route('pesan') }}" class="text-decoration-none d-inline-flex align-items-center text-secondary">
+                    <a href="{{ route('pesan') }}"
+                        class="text-decoration-none d-inline-flex align-items-center text-secondary">
                         <ion-icon name="arrow-back" class="me-1 fs-5"></ion-icon>Kembali
                     </a>
                 </div>
@@ -36,10 +37,21 @@
                         <p class="text-secondary" style="white-space: pre-line;">{{ $pesan->pesan }}</p>
                     </div>
 
-                    <div>
-                        <a href="mailto:{{ $pesan->email }}" class="btn btn-primary fw-semibold">
+                    <div class="d-flex flex-column flex-sm-row gap-2">
+                        <a href="mailto:{{ $pesan->email }}"
+                            class="btn btn-primary fw-semibold d-inline-flex align-items-center justify-content-center">
                             Balas via Email
                         </a>
+
+                        <form action="{{ route('pesan.destroy', $pesan->id) }}" method="POST" class="mb-0 d-flex"
+                            onsubmit="return confirm('Yakin ingin menghapus pesan ini?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"
+                                class="btn btn-outline-danger fw-semibold w-100 d-inline-flex align-items-center justify-content-center">
+                                Hapus
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
