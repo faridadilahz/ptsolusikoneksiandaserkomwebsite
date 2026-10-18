@@ -23,12 +23,12 @@
         @include('partials.admin.sidebar.sidebar')
 
         <div class="flex-grow-1 p-4 px-4 layout-sidebar" style="background-color: #f5f5f5;">
-            <div class="mx-auto" style="max-width: 850px">
+            <div class="mx-auto">
 
                 @if (session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
-                
+
                 <div class="d-flex justify-content-between align-items-center w-100 mb-4">
                     <a href="{{ route('layanan') }}"
                         class="text-decoration-none d-inline-flex align-items-center text-secondary">
@@ -36,17 +36,20 @@
                     </a>
 
                     <div class="d-flex align-items-center gap-2">
-                        <a href="{{ route('layanan.edit', ['id' => $layanans->id, 'from' => 'detail']) }}" 
-                           class="btn btn-primary d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
-                            <ion-icon name="create" class="me-1 fs-5"></ion-icon>Edit Layanan
+                        <a href="{{ route('layanan.edit', ['id' => $layanans->id, 'from' => 'detail']) }}"
+                            class="btn btn-primary d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
+                            <ion-icon name="create" class="me-1 fs-5"></ion-icon><span class="d-none d-sm-inline">Edit
+                                Layanan</span>
                         </a>
 
                         <form action="{{ route('layanan.destroy', $layanans->id) }}" method="POST" class="d-inline"
                             onsubmit="return confirm('Apakah Anda yakin ingin menghapus layanan ini?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-outline-danger d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
-                                <ion-icon name="trash" class="me-1 fs-5"></ion-icon>Hapus Layanan
+                            <button type="submit"
+                                class="btn btn-outline-danger d-inline-flex align-items-center btn-sm px-2 py-2 rounded-2">
+                                <ion-icon name="trash" class="me-1 fs-5"></ion-icon><span
+                                    class="d-none d-sm-inline">Hapus Layanan</span>
                             </button>
                         </form>
                     </div>
@@ -61,7 +64,8 @@
                     <h2 class="fw-bold mb-2" style="max-width: 850px;">{{ $layanans->namalayanan }}</h2>
                     <p class="text-secondary mb-3" style="max-width: 850px;">{{ $layanans->deskripsilayanan }}</p>
                     <p class="text-secondary d-inline-flex align-items-center mb-0">
-                        <ion-icon name="calendar" class="me-2"></ion-icon>{{ $layanans->created_at->locale('id')->translatedFormat('d F Y') }}
+                        <ion-icon name="calendar"
+                            class="me-2"></ion-icon>{{ $layanans->created_at->locale('id')->translatedFormat('d F Y') }}
                     </p>
                 </div>
 

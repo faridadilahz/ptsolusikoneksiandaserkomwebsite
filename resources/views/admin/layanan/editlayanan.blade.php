@@ -22,13 +22,15 @@
     <main class="d-flex flex-column flex-lg-row min-vh-100">
         @include('partials.admin.sidebar.sidebar')
         <div class="flex-grow-1 p-4 layout-sidebar" style="background-color: #f5f5f5;">
-            <div class="container-fluid" style="max-width: 900px;">
+            <div class="container-fluid">
 
                 <form action="{{ route('layanan.update', $layanans->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
                     <input type="hidden" name="redirect_to" value="{{ $from ?? 'index' }}">
+
+                    <h4 class="fw-bold mb-4">Edit Layanan</h4>
 
                     <div class="mb-4">
                         <label for="namalayanan" class="form-label text-dark fw-normal mb-2">Nama Layanan</label>
