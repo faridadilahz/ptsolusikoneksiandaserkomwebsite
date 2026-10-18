@@ -56,7 +56,7 @@
                             <a href="{{ route('admin.kelolakatasandi') }}" class="text-decoration-none p-1">
                                 <div class="card-body d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h5 class="fw-bold mb-1 text-primary d-inline-flex align-items-center">
+                                        <h5 class="fw-bold mb-1 text-black d-inline-flex align-items-center">
                                             <ion-icon name="lock-closed" class="me-2 fs-4"></ion-icon>
                                             <span>Kelola Kata Sandi</span>
                                         </h5>
