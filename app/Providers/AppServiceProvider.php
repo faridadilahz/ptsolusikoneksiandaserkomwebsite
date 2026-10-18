@@ -11,6 +11,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // Bagikan data $footerLayanans ke semua view (termasuk footer)
-        View::share('footerLayanans', Layanans::select('id', 'namalayanan')->take(3)->get());
+        View::share('footerLayanans', Layanans::select('id', 'namalayanan')->latest()->take(4)->get());
     }
 }
